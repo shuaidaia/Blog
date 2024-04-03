@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/IMG_1680(20230123-175413).JPG?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/IMG_1680(20230123-175413).JPG?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="常见的HTTP状态码：                           200 - 请求成功                           301 - 资源（网页等）被永久转移到其它URL                           404 - 请求的资源（网页等）不存在                           500 - 内部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP响应状态码大全及介绍">
+<meta property="og:url" content="http://shuaidaia.gitee.io/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/index.html">
+<meta property="og:site_name" content="码农呆的奋斗史">
+<meta property="og:description" content="常见的HTTP状态码：                           200 - 请求成功                           301 - 资源（网页等）被永久转移到其它URL                           404 - 请求的资源（网页等）不存在                           500 - 内部">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-04-03T02:23:41.000Z">
+<meta property="article:modified_time" content="2024-04-03T03:35:19.313Z">
+<meta property="article:author" content="Belly	|	vx：lin128Ve98">
+<meta property="article:tag" content="2024">
+<meta property="article:tag" content="HTTP状态码">
+<meta name="twitter:card" content="summary"><title>HTTP响应状态码大全及介绍 | 码农呆的奋斗史</title><link ref="canonical" href="http://shuaidaia.gitee.io/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">HTTP响应状态码大全及介绍</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-04-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-04-03</span></span></div></header><div class="post-body">
+        <h3 id="常见的HTTP状态码："   >
+          <a href="#常见的HTTP状态码：" class="heading-link"><i class="fas fa-link"></i></a><a href="#常见的HTTP状态码：" class="headerlink" title="常见的HTTP状态码："></a>常见的HTTP状态码：</h3>
+      
+        <h5 id="200-请求成功"   >
+          <a href="#200-请求成功" class="heading-link"><i class="fas fa-link"></i></a><a href="#200-请求成功" class="headerlink" title="200 - 请求成功"></a>200 - 请求成功</h5>
+      
+        <h5 id="301-资源（网页等）被永久转移到其它URL"   >
+          <a href="#301-资源（网页等）被永久转移到其它URL" class="heading-link"><i class="fas fa-link"></i></a><a href="#301-资源（网页等）被永久转移到其它URL" class="headerlink" title="301 - 资源（网页等）被永久转移到其它URL"></a>301 - 资源（网页等）被永久转移到其它URL</h5>
+      
+        <h5 id="404-请求的资源（网页等）不存在"   >
+          <a href="#404-请求的资源（网页等）不存在" class="heading-link"><i class="fas fa-link"></i></a><a href="#404-请求的资源（网页等）不存在" class="headerlink" title="404 - 请求的资源（网页等）不存在"></a>404 - 请求的资源（网页等）不存在</h5>
+      
+        <h5 id="500-内部服务器错误"   >
+          <a href="#500-内部服务器错误" class="heading-link"><i class="fas fa-link"></i></a><a href="#500-内部服务器错误" class="headerlink" title="500 - 内部服务器错误"></a>500 - 内部服务器错误</h5>
+      <hr>
+
+        <h3 id="HTTP状态码分类："   >
+          <a href="#HTTP状态码分类：" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码分类：" class="headerlink" title="HTTP状态码分类："></a>HTTP状态码分类：</h3>
+      
+        <h5 id="说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。"   >
+          <a href="#说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。" class="heading-link"><i class="fas fa-link"></i></a><a href="#说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。" class="headerlink" title="说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。"></a>说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。</h5>
+      
+        <h4 id="HTTP状态码共分为5种类型："   >
+          <a href="#HTTP状态码共分为5种类型：" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码共分为5种类型：" class="headerlink" title="HTTP状态码共分为5种类型："></a>HTTP状态码共分为5种类型：</h4>
+      
+        <h5 id="1-–-信息，服务器收到请求，需要请求者继续执行操作"   >
+          <a href="#1-–-信息，服务器收到请求，需要请求者继续执行操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-–-信息，服务器收到请求，需要请求者继续执行操作" class="headerlink" title="1**   – 信息，服务器收到请求，需要请求者继续执行操作"></a>1**   – 信息，服务器收到请求，需要请求者继续执行操作</h5>
+      
+        <h5 id="2-–-成功，操作被成功接收并处理"   >
+          <a href="#2-–-成功，操作被成功接收并处理" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-–-成功，操作被成功接收并处理" class="headerlink" title="2**   – 成功，操作被成功接收并处理"></a>2**   – 成功，操作被成功接收并处理</h5>
+      
+        <h5 id="3-–-重定向，需要进一步的操作以完成请求"   >
+          <a href="#3-–-重定向，需要进一步的操作以完成请求" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-–-重定向，需要进一步的操作以完成请求" class="headerlink" title="3**   – 重定向，需要进一步的操作以完成请求"></a>3**   – 重定向，需要进一步的操作以完成请求</h5>
+      
+        <h5 id="4-–-客户端错误，请求包含语法错误或无法完成请求"   >
+          <a href="#4-–-客户端错误，请求包含语法错误或无法完成请求" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-–-客户端错误，请求包含语法错误或无法完成请求" class="headerlink" title="4**   – 客户端错误，请求包含语法错误或无法完成请求"></a>4**   – 客户端错误，请求包含语法错误或无法完成请求</h5>
+      
+        <h5 id="5-–-服务器错误，服务器在处理请求的过程中发生了错误"   >
+          <a href="#5-–-服务器错误，服务器在处理请求的过程中发生了错误" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-–-服务器错误，服务器在处理请求的过程中发生了错误" class="headerlink" title="5**   – 服务器错误，服务器在处理请求的过程中发生了错误"></a>5**   – 服务器错误，服务器在处理请求的过程中发生了错误</h5>
+      <hr>
+
+        <h3 id="HTTP状态码列表："   >
+          <a href="#HTTP状态码列表：" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码列表：" class="headerlink" title="HTTP状态码列表："></a>HTTP状态码列表：</h3>
+      <div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">–HTTP状态码–</th>
+<th align="center">–状态码名称–</th>
+<th align="left">描述说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><a href="#http100">100</a></strong></td>
+<td align="center"><strong>Continue</strong></td>
+<td align="left"><strong>继续。客户端应继续其请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http101">101</a></strong></td>
+<td align="center"><strong>Switching Protocols</strong></td>
+<td align="left"><strong>切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到 HTTP 的新版本协议</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http200">200</a></strong></td>
+<td align="center"><strong>OK</strong></td>
+<td align="left"><strong>请求成功。一般用于 GET 与 POST 请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http201">201</a></strong></td>
+<td align="center"><strong>Created</strong></td>
+<td align="left"><strong>已创建。成功请求并创建了新的资源</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http200">202</a></strong></td>
+<td align="center"><strong>Accepted</strong></td>
+<td align="left"><strong>已接受。已经接受请求，但未处理完成</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http203">203</a></strong></td>
+<td align="center"><strong>Non-Authoritative Information</strong></td>
+<td align="left"><strong>非授权信息。请求成功。但返回的 meta 信息不在原始的服务器，而是一个副本</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http204">204</a></strong></td>
+<td align="center"><strong>No Content</strong></td>
+<td align="left"><strong>无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http205">205</a></strong></td>
+<td align="center"><strong>Reset Content</strong></td>
+<td align="left"><strong>重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http206">206</a></strong></td>
+<td align="center"><strong>Partial Content</strong></td>
+<td align="left"><strong>部分内容。服务器成功处理了部分 GET 请求</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http300">300</a></strong></td>
+<td align="center"><strong>Multiple Choices</strong></td>
+<td align="left"><strong>多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http301">301</a></strong></td>
+<td align="center"><strong>Moved Permanently</strong></td>
+<td align="left"><strong>永久移动。请求的资源已被永久的移动到新 URI ，返回信息会包括新的 URI ，浏览器会自动定向到新 URI 。今后任何新的请求都应使用新的 URI 代替</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http302">302</a></strong></td>
+<td align="center"><strong>Found</strong></td>
+<td align="left">**临时移动。与 301 类似。但资源只是临时被移动。客户端应继续使用原有 URI **</td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http303">303</a></strong></td>
+<td align="center"><strong>See Other</strong></td>
+<td align="left"><strong>查看其它地址。与 301 类似。使用 GET 和 POST 请求查看</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http304">304</a></strong></td>
+<td align="center"><strong>Not Modified</strong></td>
+<td align="left"><strong>未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http305">305</a></strong></td>
+<td align="center"><strong>Use Proxy</strong></td>
+<td align="left"><strong>使用代理。所请求的资源必须通过代理访问</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http306">306</a></strong></td>
+<td align="center"><strong>Unused</strong></td>
+<td align="left"><strong>已经被废弃的 HTTP 状态码</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http307">307</a></strong></td>
+<td align="center"><strong>Temporary Redirect</strong></td>
+<td align="left"><strong>临时重定向。与 302 类似。使用 GET 请求重定向</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http400">400</a></strong></td>
+<td align="center"><strong>Bad Request</strong></td>
+<td align="left"><strong>客户端请求的语法错误，服务器无法理解</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http401">401</a></strong></td>
+<td align="center"><strong>Unauthorized</strong></td>
+<td align="left"><strong>请求要求用户的身份认证</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http402">402</a></strong></td>
+<td align="center"><strong>Payment Required</strong></td>
+<td align="left"><strong>保留，将来使用</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http403">403</a></strong></td>
+<td align="center"><strong>Forbidden</strong></td>
+<td align="left"><strong>服务器理解请求客户端的请求，但是拒绝执行此请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http404">404</a></strong></td>
+<td align="center"><strong>Not Found</strong></td>
+<td align="left"><strong>服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置 “您所请求的资源无法找到” 的个性页面</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http405">405</a></strong></td>
+<td align="center"><strong>Method Not Allowed</strong></td>
+<td align="left"><strong>客户端请求中的方法被禁止</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http406">406</a></strong></td>
+<td align="center"><strong>Not Acceptable</strong></td>
+<td align="left"><strong>服务器无法根据客户端请求的内容特性完成请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http407">407</a></strong></td>
+<td align="center"><strong>Proxy Authentication Required</strong></td>
+<td align="left"><strong>请求要求代理的身份认证，与 401 类似，但请求者应当使用代理进行授权</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http408">408</a></strong></td>
+<td align="center"><strong>Request Time-out</strong></td>
+<td align="left"><strong>服务器等待客户端发送的请求时间过长，超时</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http409">409</a></strong></td>
+<td align="center"><strong>Conflict</strong></td>
+<td align="left"><strong>服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http410">410</a></strong></td>
+<td align="center"><strong>Gone</strong></td>
+<td align="left"><strong>客户端请求的资源已经不存在。410 不同于 404，如果资源以前有现在被永久删除了可使用 410 代码，网站设计人员可通过 301 代码指定资源的新位置</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http411">411</a></strong></td>
+<td align="center"><strong>Length Required</strong></td>
+<td align="left"><strong>服务器无法处理客户端发送的不带 Content-Length 的请求信息</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http412">412</a></strong></td>
+<td align="center"><strong>Precondition Failed</strong></td>
+<td align="left"><strong>客户端请求信息的先决条件错误</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http413">413</a></strong></td>
+<td align="center"><strong>Request Entity Too Large</strong></td>
+<td align="left"><strong>由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个 Retry-After 的响应信息</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http414">414</a></strong></td>
+<td align="center"><strong>Request-URI Too Large</strong></td>
+<td align="left"><strong>请求的 URI 过长（ URI 通常为网址），服务器无法处理</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http415">415</a></strong></td>
+<td align="center"><strong>Unsupported Media Type</strong></td>
+<td align="left"><strong>服务器无法处理请求附带的媒体格式</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http416">416</a></strong></td>
+<td align="center"><strong>Requested range not satisfiable</strong></td>
+<td align="left"><strong>客户端请求的范围无效</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http417">417</a></strong></td>
+<td align="center"><strong>Expectation Failed</strong></td>
+<td align="left"><strong>服务器无法满足 Expect 的请求头信息</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http500">500</a></strong></td>
+<td align="center"><strong>Internal Server Error</strong></td>
+<td align="left"><strong>服务器内部错误，无法完成请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http501">501</a></strong></td>
+<td align="center"><strong>Not Implemented</strong></td>
+<td align="left"><strong>服务器不支持请求的功能，无法完成请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http502">502</a></strong></td>
+<td align="center"><strong>Bad Gateway</strong></td>
+<td align="left"><strong>充当网关或代理的服务器，从远端服务器接收到了一个无效的请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http503">503</a></strong></td>
+<td align="center"><strong>Service Unavailable</strong></td>
+<td align="left"><strong>由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的 Retry-After 头信息中</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http504">504</a></strong></td>
+<td align="center"><strong>Gateway Time-out</strong></td>
+<td align="left"><strong>充当网关或代理的服务器，未及时从远端服务器获取请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http505">505</a></strong></td>
+<td align="center"><strong>HTTP Version not supported</strong></td>
+<td align="left"><strong>服务器不支持请求的 HTTP 协议的版本，无法完成处理</strong></td>
+</tr>
+</tbody></table></div>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://shuaidaia.gitee.io">Belly	|	vx：lin128Ve98</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://shuaidaia.gitee.io/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/">http://shuaidaia.gitee.io/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://shuaidaia.gitee.io/tags/2024/">2024</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://shuaidaia.gitee.io/tags/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/">HTTP状态码</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2024/03/14/Spring%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">Spring笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">
+          常见的HTTP状态码：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#200-%E8%AF%B7%E6%B1%82%E6%88%90%E5%8A%9F"><span class="toc-number">1.0.1.</span> <span class="toc-text">
+          200 - 请求成功</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#301-%E8%B5%84%E6%BA%90%EF%BC%88%E7%BD%91%E9%A1%B5%E7%AD%89%EF%BC%89%E8%A2%AB%E6%B0%B8%E4%B9%85%E8%BD%AC%E7%A7%BB%E5%88%B0%E5%85%B6%E5%AE%83URL"><span class="toc-number">1.0.2.</span> <span class="toc-text">
+          301 - 资源（网页等）被永久转移到其它URL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#404-%E8%AF%B7%E6%B1%82%E7%9A%84%E8%B5%84%E6%BA%90%EF%BC%88%E7%BD%91%E9%A1%B5%E7%AD%89%EF%BC%89%E4%B8%8D%E5%AD%98%E5%9C%A8"><span class="toc-number">1.0.3.</span> <span class="toc-text">
+          404 - 请求的资源（网页等）不存在</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#500-%E5%86%85%E9%83%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%94%99%E8%AF%AF"><span class="toc-number">1.0.4.</span> <span class="toc-text">
+          500 - 内部服务器错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">
+          HTTP状态码分类：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E%EF%BC%9AHTTP%E7%8A%B6%E6%80%81%E7%A0%81%E7%94%B1%E4%B8%89%E4%B8%AA%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E5%AD%97%E7%BB%84%E6%88%90%EF%BC%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E5%AD%97%E5%AE%9A%E4%B9%89%E4%BA%86%E7%8A%B6%E6%80%81%E7%A0%81%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%90%8E%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97%E6%B2%A1%E6%9C%89%E5%88%86%E7%B1%BB%E7%9A%84%E4%BD%9C%E7%94%A8%E3%80%82"><span class="toc-number">2.0.1.</span> <span class="toc-text">
+          说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%85%B1%E5%88%86%E4%B8%BA5%E7%A7%8D%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">
+          HTTP状态码共分为5种类型：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E2%80%93-%E4%BF%A1%E6%81%AF%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%94%B6%E5%88%B0%E8%AF%B7%E6%B1%82%EF%BC%8C%E9%9C%80%E8%A6%81%E8%AF%B7%E6%B1%82%E8%80%85%E7%BB%A7%E7%BB%AD%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          1**   – 信息，服务器收到请求，需要请求者继续执行操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E2%80%93-%E6%88%90%E5%8A%9F%EF%BC%8C%E6%93%8D%E4%BD%9C%E8%A2%AB%E6%88%90%E5%8A%9F%E6%8E%A5%E6%94%B6%E5%B9%B6%E5%A4%84%E7%90%86"><span class="toc-number">2.1.2.</span> <span class="toc-text">
+          2**   – 成功，操作被成功接收并处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E2%80%93-%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%8C%E9%9C%80%E8%A6%81%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%AE%8C%E6%88%90%E8%AF%B7%E6%B1%82"><span class="toc-number">2.1.3.</span> <span class="toc-text">
+          3**   – 重定向，需要进一步的操作以完成请求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E2%80%93-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%94%99%E8%AF%AF%EF%BC%8C%E8%AF%B7%E6%B1%82%E5%8C%85%E5%90%AB%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF%E6%88%96%E6%97%A0%E6%B3%95%E5%AE%8C%E6%88%90%E8%AF%B7%E6%B1%82"><span class="toc-number">2.1.4.</span> <span class="toc-text">
+          4**   – 客户端错误，请求包含语法错误或无法完成请求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E2%80%93-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%94%99%E8%AF%AF%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A8%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E9%94%99%E8%AF%AF"><span class="toc-number">2.1.5.</span> <span class="toc-text">
+          5**   – 服务器错误，服务器在处理请求的过程中发生了错误</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E5%88%97%E8%A1%A8%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">
+          HTTP状态码列表：</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/pho/IMG_0744(20220413-103811).JPG" alt="avatar"></div><p class="sidebar-ov-author__text">时时勤拂拭，勿使惹尘埃。</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Belly	|	vx：lin128Ve98</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>

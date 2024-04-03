@@ -30,7 +30,285 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/03/14/Spring%E7%AC%94%E8%AE%B0/">Spring笔记</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-03-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-03-14</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/">HTTP响应状态码大全及介绍</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-04-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-04-03</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h3 id="常见的HTTP状态码："   >
+          <a href="#常见的HTTP状态码：" class="heading-link"><i class="fas fa-link"></i></a><a href="#常见的HTTP状态码：" class="headerlink" title="常见的HTTP状态码："></a>常见的HTTP状态码：</h3>
+      
+        <h5 id="200-请求成功"   >
+          <a href="#200-请求成功" class="heading-link"><i class="fas fa-link"></i></a><a href="#200-请求成功" class="headerlink" title="200 - 请求成功"></a>200 - 请求成功</h5>
+      
+        <h5 id="301-资源（网页等）被永久转移到其它URL"   >
+          <a href="#301-资源（网页等）被永久转移到其它URL" class="heading-link"><i class="fas fa-link"></i></a><a href="#301-资源（网页等）被永久转移到其它URL" class="headerlink" title="301 - 资源（网页等）被永久转移到其它URL"></a>301 - 资源（网页等）被永久转移到其它URL</h5>
+      
+        <h5 id="404-请求的资源（网页等）不存在"   >
+          <a href="#404-请求的资源（网页等）不存在" class="heading-link"><i class="fas fa-link"></i></a><a href="#404-请求的资源（网页等）不存在" class="headerlink" title="404 - 请求的资源（网页等）不存在"></a>404 - 请求的资源（网页等）不存在</h5>
+      
+        <h5 id="500-内部服务器错误"   >
+          <a href="#500-内部服务器错误" class="heading-link"><i class="fas fa-link"></i></a><a href="#500-内部服务器错误" class="headerlink" title="500 - 内部服务器错误"></a>500 - 内部服务器错误</h5>
+      <hr>
+
+        <h3 id="HTTP状态码分类："   >
+          <a href="#HTTP状态码分类：" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码分类：" class="headerlink" title="HTTP状态码分类："></a>HTTP状态码分类：</h3>
+      
+        <h5 id="说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。"   >
+          <a href="#说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。" class="heading-link"><i class="fas fa-link"></i></a><a href="#说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。" class="headerlink" title="说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。"></a>说明：HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字没有分类的作用。</h5>
+      
+        <h4 id="HTTP状态码共分为5种类型："   >
+          <a href="#HTTP状态码共分为5种类型：" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码共分为5种类型：" class="headerlink" title="HTTP状态码共分为5种类型："></a>HTTP状态码共分为5种类型：</h4>
+      
+        <h5 id="1-–-信息，服务器收到请求，需要请求者继续执行操作"   >
+          <a href="#1-–-信息，服务器收到请求，需要请求者继续执行操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-–-信息，服务器收到请求，需要请求者继续执行操作" class="headerlink" title="1**   – 信息，服务器收到请求，需要请求者继续执行操作"></a>1**   – 信息，服务器收到请求，需要请求者继续执行操作</h5>
+      
+        <h5 id="2-–-成功，操作被成功接收并处理"   >
+          <a href="#2-–-成功，操作被成功接收并处理" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-–-成功，操作被成功接收并处理" class="headerlink" title="2**   – 成功，操作被成功接收并处理"></a>2**   – 成功，操作被成功接收并处理</h5>
+      
+        <h5 id="3-–-重定向，需要进一步的操作以完成请求"   >
+          <a href="#3-–-重定向，需要进一步的操作以完成请求" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-–-重定向，需要进一步的操作以完成请求" class="headerlink" title="3**   – 重定向，需要进一步的操作以完成请求"></a>3**   – 重定向，需要进一步的操作以完成请求</h5>
+      
+        <h5 id="4-–-客户端错误，请求包含语法错误或无法完成请求"   >
+          <a href="#4-–-客户端错误，请求包含语法错误或无法完成请求" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-–-客户端错误，请求包含语法错误或无法完成请求" class="headerlink" title="4**   – 客户端错误，请求包含语法错误或无法完成请求"></a>4**   – 客户端错误，请求包含语法错误或无法完成请求</h5>
+      
+        <h5 id="5-–-服务器错误，服务器在处理请求的过程中发生了错误"   >
+          <a href="#5-–-服务器错误，服务器在处理请求的过程中发生了错误" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-–-服务器错误，服务器在处理请求的过程中发生了错误" class="headerlink" title="5**   – 服务器错误，服务器在处理请求的过程中发生了错误"></a>5**   – 服务器错误，服务器在处理请求的过程中发生了错误</h5>
+      <hr>
+
+        <h3 id="HTTP状态码列表："   >
+          <a href="#HTTP状态码列表：" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码列表：" class="headerlink" title="HTTP状态码列表："></a>HTTP状态码列表：</h3>
+      <div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">–HTTP状态码–</th>
+<th align="center">–状态码名称–</th>
+<th align="left">描述说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><a href="#http100">100</a></strong></td>
+<td align="center"><strong>Continue</strong></td>
+<td align="left"><strong>继续。客户端应继续其请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http101">101</a></strong></td>
+<td align="center"><strong>Switching Protocols</strong></td>
+<td align="left"><strong>切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到 HTTP 的新版本协议</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http200">200</a></strong></td>
+<td align="center"><strong>OK</strong></td>
+<td align="left"><strong>请求成功。一般用于 GET 与 POST 请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http201">201</a></strong></td>
+<td align="center"><strong>Created</strong></td>
+<td align="left"><strong>已创建。成功请求并创建了新的资源</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http200">202</a></strong></td>
+<td align="center"><strong>Accepted</strong></td>
+<td align="left"><strong>已接受。已经接受请求，但未处理完成</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http203">203</a></strong></td>
+<td align="center"><strong>Non-Authoritative Information</strong></td>
+<td align="left"><strong>非授权信息。请求成功。但返回的 meta 信息不在原始的服务器，而是一个副本</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http204">204</a></strong></td>
+<td align="center"><strong>No Content</strong></td>
+<td align="left"><strong>无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http205">205</a></strong></td>
+<td align="center"><strong>Reset Content</strong></td>
+<td align="left"><strong>重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http206">206</a></strong></td>
+<td align="center"><strong>Partial Content</strong></td>
+<td align="left"><strong>部分内容。服务器成功处理了部分 GET 请求</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http300">300</a></strong></td>
+<td align="center"><strong>Multiple Choices</strong></td>
+<td align="left"><strong>多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http301">301</a></strong></td>
+<td align="center"><strong>Moved Permanently</strong></td>
+<td align="left"><strong>永久移动。请求的资源已被永久的移动到新 URI ，返回信息会包括新的 URI ，浏览器会自动定向到新 URI 。今后任何新的请求都应使用新的 URI 代替</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http302">302</a></strong></td>
+<td align="center"><strong>Found</strong></td>
+<td align="left">**临时移动。与 301 类似。但资源只是临时被移动。客户端应继续使用原有 URI **</td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http303">303</a></strong></td>
+<td align="center"><strong>See Other</strong></td>
+<td align="left"><strong>查看其它地址。与 301 类似。使用 GET 和 POST 请求查看</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http304">304</a></strong></td>
+<td align="center"><strong>Not Modified</strong></td>
+<td align="left"><strong>未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http305">305</a></strong></td>
+<td align="center"><strong>Use Proxy</strong></td>
+<td align="left"><strong>使用代理。所请求的资源必须通过代理访问</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http306">306</a></strong></td>
+<td align="center"><strong>Unused</strong></td>
+<td align="left"><strong>已经被废弃的 HTTP 状态码</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http307">307</a></strong></td>
+<td align="center"><strong>Temporary Redirect</strong></td>
+<td align="left"><strong>临时重定向。与 302 类似。使用 GET 请求重定向</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http400">400</a></strong></td>
+<td align="center"><strong>Bad Request</strong></td>
+<td align="left"><strong>客户端请求的语法错误，服务器无法理解</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http401">401</a></strong></td>
+<td align="center"><strong>Unauthorized</strong></td>
+<td align="left"><strong>请求要求用户的身份认证</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http402">402</a></strong></td>
+<td align="center"><strong>Payment Required</strong></td>
+<td align="left"><strong>保留，将来使用</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http403">403</a></strong></td>
+<td align="center"><strong>Forbidden</strong></td>
+<td align="left"><strong>服务器理解请求客户端的请求，但是拒绝执行此请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http404">404</a></strong></td>
+<td align="center"><strong>Not Found</strong></td>
+<td align="left"><strong>服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置 “您所请求的资源无法找到” 的个性页面</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http405">405</a></strong></td>
+<td align="center"><strong>Method Not Allowed</strong></td>
+<td align="left"><strong>客户端请求中的方法被禁止</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http406">406</a></strong></td>
+<td align="center"><strong>Not Acceptable</strong></td>
+<td align="left"><strong>服务器无法根据客户端请求的内容特性完成请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http407">407</a></strong></td>
+<td align="center"><strong>Proxy Authentication Required</strong></td>
+<td align="left"><strong>请求要求代理的身份认证，与 401 类似，但请求者应当使用代理进行授权</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http408">408</a></strong></td>
+<td align="center"><strong>Request Time-out</strong></td>
+<td align="left"><strong>服务器等待客户端发送的请求时间过长，超时</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http409">409</a></strong></td>
+<td align="center"><strong>Conflict</strong></td>
+<td align="left"><strong>服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http410">410</a></strong></td>
+<td align="center"><strong>Gone</strong></td>
+<td align="left"><strong>客户端请求的资源已经不存在。410 不同于 404，如果资源以前有现在被永久删除了可使用 410 代码，网站设计人员可通过 301 代码指定资源的新位置</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http411">411</a></strong></td>
+<td align="center"><strong>Length Required</strong></td>
+<td align="left"><strong>服务器无法处理客户端发送的不带 Content-Length 的请求信息</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http412">412</a></strong></td>
+<td align="center"><strong>Precondition Failed</strong></td>
+<td align="left"><strong>客户端请求信息的先决条件错误</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http413">413</a></strong></td>
+<td align="center"><strong>Request Entity Too Large</strong></td>
+<td align="left"><strong>由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个 Retry-After 的响应信息</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http414">414</a></strong></td>
+<td align="center"><strong>Request-URI Too Large</strong></td>
+<td align="left"><strong>请求的 URI 过长（ URI 通常为网址），服务器无法处理</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http415">415</a></strong></td>
+<td align="center"><strong>Unsupported Media Type</strong></td>
+<td align="left"><strong>服务器无法处理请求附带的媒体格式</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http416">416</a></strong></td>
+<td align="center"><strong>Requested range not satisfiable</strong></td>
+<td align="left"><strong>客户端请求的范围无效</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http417">417</a></strong></td>
+<td align="center"><strong>Expectation Failed</strong></td>
+<td align="left"><strong>服务器无法满足 Expect 的请求头信息</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http500">500</a></strong></td>
+<td align="center"><strong>Internal Server Error</strong></td>
+<td align="left"><strong>服务器内部错误，无法完成请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http501">501</a></strong></td>
+<td align="center"><strong>Not Implemented</strong></td>
+<td align="left"><strong>服务器不支持请求的功能，无法完成请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http502">502</a></strong></td>
+<td align="center"><strong>Bad Gateway</strong></td>
+<td align="left"><strong>充当网关或代理的服务器，从远端服务器接收到了一个无效的请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http503">503</a></strong></td>
+<td align="center"><strong>Service Unavailable</strong></td>
+<td align="left"><strong>由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的 Retry-After 头信息中</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http504">504</a></strong></td>
+<td align="center"><strong>Gateway Time-out</strong></td>
+<td align="left"><strong>充当网关或代理的服务器，未及时从远端服务器获取请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong><a href="#http505">505</a></strong></td>
+<td align="center"><strong>HTTP Version not supported</strong></td>
+<td align="left"><strong>服务器不支持请求的 HTTP 协议的版本，无法完成处理</strong></td>
+</tr>
+</tbody></table></div>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/03/14/Spring%E7%AC%94%E8%AE%B0/">Spring笔记</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-03-14</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-03-14</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="AOP底层实现原理："   >
           <a href="#AOP底层实现原理：" class="heading-link"><i class="fas fa-link"></i></a><a href="#AOP底层实现原理：" class="headerlink" title="AOP底层实现原理："></a>AOP底层实现原理：</h2>
       
@@ -120,4 +398,56 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <p>2.完成Linux操作系统学习，了解了命令的基本使用，能够维护我买的小服务器。</p>
 <p>3.完成Nginx学习，知道正反向代理的区别，学会自定义Nginx的config配置文件，来实现负载均衡和请求转发。</p>
 <p>4.完成Redis系统学习。</p>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/pho/IMG_0744(20220413-103811).JPG" alt="avatar"></div><p class="sidebar-ov-author__text">时时勤拂拭，勿使惹尘埃。</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">18</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">16</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>© 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Belly	|	vx：lin128Ve98</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/11/06/%E5%8D%81%E4%B8%80%E6%9C%88%E6%B8%85%E5%8D%95/">十一月清单</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-11-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-11-06</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="十一月清单："   >
+          <a href="#十一月清单：" class="heading-link"><i class="fas fa-link"></i></a><a href="#十一月清单：" class="headerlink" title="十一月清单："></a>十一月清单：</h2>
+      <p>1.继续SpringCloud组件学习</p>
+<p>2.学习Linux操作系统</p>
+<p>3.学习Nginx</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/11/06/%E5%8D%81%E6%9C%88%E6%80%BB%E7%BB%93/">十月总结</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-11-06</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-11-06</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>​	十月耳朵旧病复发，学习进度又拖延了，还要连续每周去趟医院，只能带一边耳机学习，不过现在好点了。在此之前完成了毕业设计项目并部署上线了，后面可以继续优化。SpringCloud微服务组件刚学完Eureka注册中心、GateWay网关、链路追踪Sleuth和Zipkin。继续往前冲~~~~</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/10/31/docker%E9%83%A8%E7%BD%B2/">docker前后端+mysql部署</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-10-31</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-11-06</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>在服务器上使用Docker输入上面命令下载mysql5.7版本：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name mysql -p 3306:3306 -e TZ=Asia/shanghai -e MYSQL_ROOT_PASSWORD=128 mysql:5.7</span><br></pre></td></tr></table></div></figure>
+
+<p>后端项目镜像搭建：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t sixseven .</span><br></pre></td></tr></table></div></figure>
+
+<p>后台运行后端项目：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name sixseven -p 9090:9090 -v /root/docker/dist/src:/root/docker/dist/src sixseven:v1.1.3</span><br></pre></td></tr></table></div></figure>
+
+<p>前端项目镜像搭建：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t sixseven-frontend:v1.1.1 ./docker</span><br></pre></td></tr></table></div></figure>
+
+<p>后台运行前端：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name nginx -p 80:80 -v /root/docker/dist/html:/user/share/nginx/html sixseven-frontend:1.2.3</span><br></pre></td></tr></table></div></figure>
+
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/10/09/%E5%8D%81%E6%9C%88%E6%B8%85%E5%8D%95/">十月清单</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-10-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-10-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="续九月未完成的："   >
+          <a href="#续九月未完成的：" class="heading-link"><i class="fas fa-link"></i></a><a href="#续九月未完成的：" class="headerlink" title="续九月未完成的："></a>续九月未完成的：</h2>
+      <p>1.完成毕业设计<br>2.优化简历</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/09/01/%E4%B9%9D%E6%9C%88%E6%B8%85%E5%8D%95/">九月清单</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-09-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="九月开学内卷计划："   >
+          <a href="#九月开学内卷计划：" class="heading-link"><i class="fas fa-link"></i></a><a href="#九月开学内卷计划：" class="headerlink" title="九月开学内卷计划："></a>九月开学内卷计划：</h2>
+      <p>1.学习SpringBoot框架<br>2.完成毕业设计<br>3.准备简历(可能赶不上秋招了)</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/09/01/%E4%B8%83%E5%85%AB%E6%9C%88%E6%9A%91%E5%81%87%E6%80%BB%E7%BB%93/">七八月暑假总结</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-09-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="六月-暑假两月完成了Spring、SpringMVC、Mybatis的学习"   >
+          <a href="#六月-暑假两月完成了Spring、SpringMVC、Mybatis的学习" class="heading-link"><i class="fas fa-link"></i></a><a href="#六月-暑假两月完成了Spring、SpringMVC、Mybatis的学习" class="headerlink" title="六月+暑假两月完成了Spring、SpringMVC、Mybatis的学习"></a>六月+暑假两月完成了Spring、SpringMVC、Mybatis的学习</h2>
+      <p>包括了底层代码的解读和原理机制实现，比如：ioc容器的底层实现、aop的动态代理机制，还亲自动手写了SpringMVC底层实现，从前端发送url-&gt;DispatcherServlet-&gt;映射器-&gt;返回到DispatcherServlet-&gt;处理器适配器-&gt;Controller-&gt;正常自己实现的业务代码-&gt;返回到Controller-&gt;ModelAndView返回到处理器适配器-&gt;返回给DispatcherServlet-&gt;ViewResovler-&gt;再返回给DispatcherServlet-&gt;视图渲染-&gt;返回响应。属于是收获满满^_^</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/10/%E4%BA%94%E6%9C%88%E5%AD%A6%E4%B9%A0%E6%B8%85%E5%8D%95/">五月的学习清单</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-10</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="系统学习框架知识："   >
+          <a href="#系统学习框架知识：" class="heading-link"><i class="fas fa-link"></i></a><a href="#系统学习框架知识：" class="headerlink" title="系统学习框架知识："></a>系统学习框架知识：</h2>
+      <p>1.前端框架Vue+Axios[要求：看得懂、能维护、会调api即可]<br>2.后端框架SSM</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/10/%E5%9B%9B%E6%9C%88%E6%80%BB%E7%BB%93/">四月总结</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-10</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>四月完成数据库复习，就进入了web[servlet+jsp那一套]学习。自己动手写了个简单版的小tomcat，运用到了dom4j、反射、网络编程、IO等java基础，加强了对tomcat的底层机制理解。原本计算机基础系统学习是在四月完成的，但里面大多数都是理论知识，太枯燥了，只能一天看一点，一步一步的往前推进。这个属于是考虑不全，临时改变计划，不过四月一边学web一边把前端的h5、c3、js、jquery、ajax学了，不过只是简单的学习了一下，前端对自己的要求是能看懂、能维护、会调api的一个层面。</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/03/21/%E5%9B%9B%E6%9C%88%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%B8%85%E5%8D%95/">四月的学习清单</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-03-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="接下来四月补习一下计算机基础知识："   >
+          <a href="#接下来四月补习一下计算机基础知识：" class="heading-link"><i class="fas fa-link"></i></a><a href="#接下来四月补习一下计算机基础知识：" class="headerlink" title="接下来四月补习一下计算机基础知识："></a>接下来四月补习一下计算机基础知识：</h2>
+      <p>1.数据结构与算法基础<br>2.计算机操作系统<br>3.计算机网络<br>4.复习数据库知识</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/03/21/%E4%B8%89%E6%9C%88%E5%B7%A9%E5%9B%BAJava%E5%9F%BA%E7%A1%80/">三月巩固Java基础</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-03-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-03-21</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>每天坚持自学八小时以上！终于把Java基础复习完辣！！！<br>如梦初醒，醍醐灌顶。哈哈哈哈<br>给爷冲冲冲冲冲冲冲冲冲冲冲冲!!!!!!</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/03/03/%E5%9B%9E%E4%B8%8D%E5%88%B0%E7%9A%84%E8%BF%87%E5%8E%BB/">回不到的过去</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-03-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-10-09</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>  高考已过两年之久，每次睡前都会回想，我整个中学生涯浑浑噩噩，全是在电脑游戏颓废中度过。有人会问我，你学习有没有目标，每次都只是敷衍过去，其实我根本不知道什么是目标，未来会怎么样，只是在温室里躺平，没有一点儿动力。有的人说现在大部分人都是这个状态，做好当下的任务就好了，不用考虑未来会怎么样，可我没得选了，就算不能证明我可以，那也要证明我不可以。<br>  我绝对不能让自己这样继续懒散下去了，你会说没有考上好的大学会有遗憾吗，那当然是有，但我在高中的最后那段时间里<strong>学会了，如何去学习，如何去进步</strong>，这都比什么都宝贵。这何尝不是一种成长，加油！！！未来仍可握于手中。</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/28/%E5%85%85%E5%AE%9E%E7%9A%84%E5%AF%92%E5%81%87/">寒假总结</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="在摸索了一学期之后，终于确定了自己今后的学习路线和未来规划————java后端开发方向。"   >
+          <a href="#在摸索了一学期之后，终于确定了自己今后的学习路线和未来规划————java后端开发方向。" class="heading-link"><i class="fas fa-link"></i></a><a href="#在摸索了一学期之后，终于确定了自己今后的学习路线和未来规划————java后端开发方向。" class="headerlink" title="在摸索了一学期之后，终于确定了自己今后的学习路线和未来规划————java后端开发方向。"></a>在摸索了一学期之后，终于确定了自己今后的学习路线和未来规划————java后端开发方向。</h2>
+      <p>整个寒假，为了往后看得懂源码，我巩固了Java一些基础知识，发现之前学得全是皮毛，对基础知识并没有很深刻的印象，我开始在b站找资源去学习Java，来为之后学习主流Spring框架做准备。<br>不过Java还没复习完就开学了，有点可惜，希望三月份能复习完。然后再去学习框架知识和做两个项目来熟练掌握其使用。<br>也希望我在暑假之前能具备去实习标准。</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/27/%E5%9C%A8post%E4%B8%8B%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0/">别滑辣，没有辣</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="就到这啦！真心感谢你能看完我的成长之路……"   >
+          <a href="#就到这啦！真心感谢你能看完我的成长之路……" class="heading-link"><i class="fas fa-link"></i></a><a href="#就到这啦！真心感谢你能看完我的成长之路……" class="headerlink" title="就到这啦！真心感谢你能看完我的成长之路……"></a>就到这啦！真心感谢你能看完我的成长之路……</h1>
+      </div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/pho/IMG_0744(20220413-103811).JPG" alt="avatar"></div><p class="sidebar-ov-author__text">时时勤拂拭，勿使惹尘埃。</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Belly	|	vx：lin128Ve98</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
