@@ -30,7 +30,422 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/">HTTP响应状态码大全及介绍</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-04-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-04-03</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/10/23/MySQL%E5%87%BD%E6%95%B0%E5%A4%A7%E5%85%A8/">MySQL函数大全笔记（持续更新中...）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-10-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-11-15</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="控制流程函数："   >
+          <a href="#控制流程函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#控制流程函数：" class="headerlink" title="控制流程函数："></a>控制流程函数：</h2>
+      
+        <h3 id="1-case-when-then-函数"   >
+          <a href="#1-case-when-then-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-case-when-then-函数" class="headerlink" title="1. case when then 函数"></a>1. case when then 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    first_name,</span><br><span class="line">    last_name,</span><br><span class="line">    CASE </span><br><span class="line">        WHEN salary &lt; 3000 THEN &#x27;Low&#x27;</span><br><span class="line">        WHEN salary BETWEEN 3000 AND 6000 THEN &#x27;Medium&#x27;</span><br><span class="line">        ELSE &#x27;High&#x27;</span><br><span class="line">    END AS salary_category</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：这个和Java里面一样</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="2-IF-函数"   >
+          <a href="#2-IF-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-IF-函数" class="headerlink" title="2. IF 函数"></a>2. IF 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 例子:</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    first_name,</span><br><span class="line">    last_name,</span><br><span class="line">    IF(salary &gt; 5000, &#x27;High Salary&#x27;, &#x27;Low Salary&#x27;) AS salary_status</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果 salary &gt; 5000 为true，则返回&#x27;High Salary&#x27;，否则返回&#x27;Low Salary&#x27;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="3-IFNULL-函数"   >
+          <a href="#3-IFNULL-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-IFNULL-函数" class="headerlink" title="3. IFNULL 函数"></a>3. IFNULL 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 例子:</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    first_name,</span><br><span class="line">    last_name,</span><br><span class="line">    IFNULL(phone_number, &#x27;No Phone Number&#x27;) AS contact_number</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果 phone_number 为null，则返回&#x27;No Phone Number&#x27;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="4-NULLIF-函数"   >
+          <a href="#4-NULLIF-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-NULLIF-函数" class="headerlink" title="4. NULLIF 函数"></a>4. NULLIF 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    product_id,</span><br><span class="line">    product_name,</span><br><span class="line">    NULLIF(discount, 0) AS effective_discount</span><br><span class="line">FROM </span><br><span class="line">    products;</span><br><span class="line">-- 解析：如果 discount 为0，则返回null，否则返回原始的值</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="字符串函数："   >
+          <a href="#字符串函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#字符串函数：" class="headerlink" title="字符串函数："></a>字符串函数：</h2>
+      
+        <h3 id="5-ASCII-函数"   >
+          <a href="#5-ASCII-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    first_name,</span><br><span class="line">    ASCII(SUBSTRING(first_name, 1, 1)) AS ascii_value</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果员工的名字是 &quot;Belly&quot;，则 ascii_value 将返回 66，因为大写字母 &quot;B&quot; 的 ASCII 值是 66。</span><br></pre></td></tr></table></div></figure>
+
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://baike.baidu.com/item/MySQL%E5%87%BD%E6%95%B0/630942?fr=ge_ala" >MySQL函数_百度百科 (baidu.com)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="6-BIN-函数"   >
+          <a href="#6-BIN-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#6-BIN-函数" class="headerlink" title="6. BIN 函数"></a>6. BIN 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    salary,</span><br><span class="line">    BIN(salary) AS binary_salary</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果工资是 10，binary_salary 将显示为 &#x27;1010&#x27;。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="7-CHAR-函数"   >
+          <a href="#7-CHAR-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#7-CHAR-函数" class="headerlink" title="7. CHAR 函数"></a>7. CHAR 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    CHAR(65) AS character_a,</span><br><span class="line">    CHAR(66, 67) AS characters_bc</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：CHAR(65)返回A，CHAR(66, 67)返回BC</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="8-CHAR-LENGTH-函数"   >
+          <a href="#8-CHAR-LENGTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-CHAR-LENGTH-函数" class="headerlink" title="8. CHAR_LENGTH 函数"></a>8. CHAR_LENGTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    first_name,</span><br><span class="line">    CHAR_LENGTH(first_name) AS name_length</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果员工的名字是 &quot;Belly&quot;，则 name_length 将返回 5。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="9-CHARACTER-LENGTH-函数"   >
+          <a href="#9-CHARACTER-LENGTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#9-CHARACTER-LENGTH-函数" class="headerlink" title="9. CHARACTER_LENGTH 函数"></a>9. CHARACTER_LENGTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    employee_id,</span><br><span class="line">    last_name,</span><br><span class="line">    CHARACTER_LENGTH(last_name) AS name_length</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果员工的名字是 &quot;Belly&quot;，则 name_length 将返回 5。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="10-COMPRESS-函数"   >
+          <a href="#10-COMPRESS-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#10-COMPRESS-函数" class="headerlink" title="10. COMPRESS 函数"></a>10. COMPRESS 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    first_name,</span><br><span class="line">    COMPRESS(first_name) AS compressed_name</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：该函数会将每个员工的名字压缩，生成一个更小的二进制格式。如果你需要节省存储或优化性能，使用这个函数会很有帮助。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="11-CONCAT-函数"   >
+          <a href="#11-CONCAT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#11-CONCAT-函数" class="headerlink" title="11. CONCAT 函数"></a>11. CONCAT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    first_name,</span><br><span class="line">    last_name,</span><br><span class="line">    CONCAT(first_name, &#x27;_&#x27;, last_name) AS full_name</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：如果 first_name 是 &quot;Belly&quot; 而 last_name 是 &quot;lin&quot;，则 full_name 将返回 &quot;Belly_lin&quot;。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="12-CONCAT-WS-函数"   >
+          <a href="#12-CONCAT-WS-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#12-CONCAT-WS-函数" class="headerlink" title="12. CONCAT_WS 函数"></a>12. CONCAT_WS 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT </span><br><span class="line">    first_name,</span><br><span class="line">    last_name,</span><br><span class="line">    CONCAT_WS(&#x27; &#x27;, first_name, last_name) AS full_name</span><br><span class="line">FROM </span><br><span class="line">    employees;</span><br><span class="line">-- 解析：该函数使用空格作为分隔符，如果 first_name 是 &quot;Belly&quot; 而 last_name 是 &quot;lin&quot;，则 full_name 将返回 &quot;Belly lin&quot;。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="13-CONV-函数"   >
+          <a href="#13-CONV-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#13-CONV-函数" class="headerlink" title="13. CONV 函数"></a>13. CONV 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT CONV(10, 10, 2);   -- 返回 &#x27;1010&#x27;</span><br><span class="line">SELECT CONV(&#x27;A&#x27;, 16, 10); -- 返回 &#x27;10&#x27;</span><br><span class="line">SELECT CONV(&#x27;10&#x27;, 8, 16); -- 返回 &#x27;8&#x27;</span><br><span class="line">-- 解析：1.将十进制数转换为二进制；2.将十六进制数转换为十进制；3.将八进制数转换为十六进制。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="14-ELT-函数"   >
+          <a href="#14-ELT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#14-ELT-函数" class="headerlink" title="14. ELT 函数"></a>14. ELT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT ELT(2, &#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;cherry&#x27;);  -- 返回 &#x27;banana&#x27;</span><br><span class="line">SELECT ELT(5, &#x27;one&#x27;, &#x27;two&#x27;, &#x27;three&#x27;);        -- 返回 NULL，因为没有第五个元素</span><br><span class="line">-- 解析：索引（从 1 开始），如果索引超出范围，返回 null。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="15-EXPORT-SET-函数"   >
+          <a href="#15-EXPORT-SET-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#15-EXPORT-SET-函数" class="headerlink" title="15. EXPORT_SET 函数"></a>15. EXPORT_SET 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT EXPORT_SET(preferences, &#x27;Enabled&#x27;, &#x27;Disabled&#x27;, &#x27;, &#x27;, 3) AS preference_string</span><br><span class="line">FROM user_preferences;</span><br><span class="line">-- 解析：如果 preferences 的值为 5（即二进制 101），输出将会是：Enabled, Disabled, Enabled。（ps：第四个空是在结果字符串中分隔符，第五个空是要检查的位数）</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="16-FIELD-函数"   >
+          <a href="#16-FIELD-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#16-FIELD-函数" class="headerlink" title="16. FIELD 函数"></a>16. FIELD 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT FIELD(&#x27;b&#x27;, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;);</span><br><span class="line">-- 解析：输出将是 2，因为 &#x27;b&#x27; 是列表中的第二个元素，如果不存在输出是0。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="17-FIND-IN-SET-函数"   >
+          <a href="#17-FIND-IN-SET-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#17-FIND-IN-SET-函数" class="headerlink" title="17. FIND_IN_SET 函数"></a>17. FIND_IN_SET 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT * FROM students WHERE FIND_IN_SET(&#x27;Math&#x27;, courses);</span><br><span class="line">-- 解析：如果有一个表 students，其中有一个列 courses，它存储了学生所选的课程，以逗号分隔（ps: courses:&quot;Math,English,Physics&quot;）,这个查询将返回所有选修了“Math”课程的学生。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="18-FORMAT-函数"   >
+          <a href="#18-FORMAT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#18-FORMAT-函数" class="headerlink" title="18. FORMAT 函数"></a>18. FORMAT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT FORMAT(1234567.891, 2);</span><br><span class="line">-- 解析：结果输出为1,234,567.89，</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="19-HEX-函数"   >
+          <a href="#19-HEX-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#19-HEX-函数" class="headerlink" title="19. HEX 函数"></a>19. HEX 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT HEX(&#x27;Hello&#x27;);</span><br><span class="line">SELECT HEX(255);</span><br><span class="line">-- 解析：输出结果 1.&#x27;48656C6C6F&#x27;；2.&#x27;FF&#x27;，该函数是能将字符串或则数字转成十六进制。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="20-INSTR-函数"   >
+          <a href="#20-INSTR-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#20-INSTR-函数" class="headerlink" title="20. INSTR 函数"></a>20. INSTR 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT INSTR(&#x27;Hello, World!&#x27;, &#x27;World&#x27;);</span><br><span class="line">-- 解析：输出结果为8， 对大小写敏感，从1开始计数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="21-LCASE-函数"   >
+          <a href="#21-LCASE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#21-LCASE-函数" class="headerlink" title="21. LCASE 函数"></a>21. LCASE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LCASE(&#x27;Hello World&#x27;);</span><br><span class="line">-- 解析：输出结果为&#x27;hello world&#x27;，LCASE() 是 LOWER() 的同义词，将字符串中的所有字母转换为小写字母。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="22-LEFT-函数"   >
+          <a href="#22-LEFT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#22-LEFT-函数" class="headerlink" title="22. LEFT 函数"></a>22. LEFT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LEFT(&#x27;Hello World&#x27;, 5);</span><br><span class="line">-- 解析：输出结果为&#x27;Hello&#x27;，该函数用于从一个字符串的左侧提取指定数量的字符。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="23-LENGTH-函数"   >
+          <a href="#23-LENGTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#23-LENGTH-函数" class="headerlink" title="23. LENGTH 函数"></a>23. LENGTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LENGTH(&#x27;Hello World&#x27;);</span><br><span class="line">-- 解析：输出结果为11，因为“Hello World”包含 11 个字符</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="24-LOAD-FILE-函数"   >
+          <a href="#24-LOAD-FILE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#24-LOAD-FILE-函数" class="headerlink" title="24. LOAD_FILE 函数"></a>24. LOAD_FILE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LOAD_FILE(&#x27;/path/to/your/file.txt&#x27;) AS file_content;</span><br><span class="line">-- 解析：该函数用于从指定的文件中读取数据。它返回文件的内容，前提是服务器有权限访问该文件。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="25-LOCATE-函数"   >
+          <a href="#25-LOCATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#25-LOCATE-函数" class="headerlink" title="25. LOCATE 函数"></a>25. LOCATE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LOCATE(&#x27;world&#x27;, &#x27;Hello world!&#x27;);</span><br><span class="line">SELECT LOCATE(&#x27;o&#x27;, &#x27;Hello world!&#x27;, 5);</span><br><span class="line">-- 解析：1.输出结果为7，因为 &quot;world&quot; 从第 7 个字符开始；2.输出结果为8，从第 5 个字符开始查找 &quot;o&quot;，找到的位置是第 8 个，如果不存在则返回0。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="26-LOWER-函数"   >
+          <a href="#26-LOWER-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#26-LOWER-函数" class="headerlink" title="26. LOWER 函数"></a>26. LOWER 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LOWER(&#x27;Hello World&#x27;);</span><br><span class="line">-- 解析：输出结果为&#x27;hello world&#x27;，LCASE() 是 LOWER() 的同义词，将字符串中的所有字母转换为小写字母。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="27-LPAD-函数"   >
+          <a href="#27-LPAD-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#27-LPAD-函数" class="headerlink" title="27. LPAD 函数"></a>27. LPAD 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LPAD(&#x27;123&#x27;, 5, &#x27;0&#x27;);</span><br><span class="line">SELECT LPAD(&#x27;Hello&#x27;, 3, &#x27;X&#x27;);</span><br><span class="line">-- 解析：1.输出结果为&#x27;00123&#x27;；2.输出结果为&#x27;Hel&#x27;，因为长度限制为 3。该函数用于将字符串的左侧填充指定的字符，以达到特定的长度。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="28-LTRIM-函数"   >
+          <a href="#28-LTRIM-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#28-LTRIM-函数" class="headerlink" title="28. LTRIM 函数"></a>28. LTRIM 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LTRIM(&#x27;   Hello World!   &#x27;);</span><br><span class="line">-- 解析：输出结果为&#x27;Hello World!   &#x27;，左侧的空格被删除。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="29-MAKE-SET-函数"   >
+          <a href="#29-MAKE-SET-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#29-MAKE-SET-函数" class="headerlink" title="29. MAKE_SET 函数"></a>29. MAKE_SET 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MAKE_SET(5, &#x27;Apple&#x27;, &#x27;Banana&#x27;, &#x27;Cherry&#x27;, &#x27;Date&#x27;, &#x27;Elderberry&#x27;);</span><br><span class="line">SELECT MAKE_SET(3, &#x27;Red&#x27;, &#x27;Green&#x27;, &#x27;Blue&#x27;, &#x27;Yellow&#x27;, &#x27;Black&#x27;);</span><br><span class="line">-- 解析：1.返回结果为&#x27;Apple,Cherry&#x27;，因为 5 的二进制是 101，表示选择第 1 和第 3 个字符串；2.返回结果为&#x27;Red,Green&#x27;，因为 3 的二进制是 011，表示选择第 1 和第 2 个字符串。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="30-MID-函数"   >
+          <a href="#30-MID-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#30-MID-函数" class="headerlink" title="30. MID 函数"></a>30. MID 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MID(&#x27;Hello World&#x27;, 1, 5);</span><br><span class="line">-- 解析：输出结果为&#x27;Hello&#x27;，MID(str ,pos ,len ) 是 SUBSTRING(str ,pos ,len ) 的同义词。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="31-OCT-函数"   >
+          <a href="#31-OCT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#31-OCT-函数" class="headerlink" title="31. OCT 函数"></a>31. OCT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT OCT(10);</span><br><span class="line">-- 解析：返回结果为：12，该函数用于将数字转换为八进制（Octal）字符串表示。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="32-OCTET-LENGTH-函数"   >
+          <a href="#32-OCTET-LENGTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#32-OCTET-LENGTH-函数" class="headerlink" title="32. OCTET_LENGTH 函数"></a>32. OCTET_LENGTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT OCTET_LENGTH(&#x27;中文&#x27;);</span><br><span class="line">-- 解析：返回结果为：6（字符 &quot;中文&quot; 在 UTF-8 编码下每个字符占用 3 个字节），该函数是计算字符串占用的内存大小，而不是字符数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="33-ORD-函数"   >
+          <a href="#33-ORD-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#33-ORD-函数" class="headerlink" title="33. ORD 函数"></a>33. ORD 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT ORD(&#x27;Hello&#x27;);</span><br><span class="line">SELECT ORD(&#x27;你&#x27;);</span><br><span class="line">-- 解析：1.输出结果为：72；2.输出结果为：20320（在 UTF-8 编码下，字符 &#x27;你&#x27; 的 Unicode 代码点是 20320），该函数用于返回字符串中第一个字符的 ASCII 码 或 Unicode 代码点。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="34-POSITION-函数"   >
+          <a href="#34-POSITION-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#34-POSITION-函数" class="headerlink" title="34. POSITION 函数"></a>34. POSITION 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT POSITION(&#x27;na&#x27; IN &#x27;banana&#x27;);</span><br><span class="line">-- 解析：输出结果为：2，该函数用于返回子字符串在字符串中首次出现的位置（索引，从1开始）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="35-QUOTE-函数"   >
+          <a href="#35-QUOTE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#35-QUOTE-函数" class="headerlink" title="35. QUOTE 函数"></a>35. QUOTE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT QUOTE(&#x27;This is a &quot;quoted&quot; word&#x27;);</span><br><span class="line">-- 解析：输出结果为：&#x27;This is a \&quot;quoted\&quot; word&#x27;，转义双引号，生成合法的 SQL 字符串，该函数用于将字符串转换为合法的 SQL 字符串文字（即在字符串两边加上引号）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="36-REPEAT-函数"   >
+          <a href="#36-REPEAT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#36-REPEAT-函数" class="headerlink" title="36. REPEAT 函数"></a>36. REPEAT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT REPEAT(&#x27;abc&#x27;, 3);</span><br><span class="line">SELECT REPEAT(&#x27;test&#x27;, 0);</span><br><span class="line">-- 解析：1.输出结果为：abcabcabc ；2.输出结果为：&#x27;&#x27;(空字符串)，该函数用于重复一个字符串指定的次数，并返回生成的结果，如次数为负数报错。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="37-REPLACE-函数"   >
+          <a href="#37-REPLACE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#37-REPLACE-函数" class="headerlink" title="37. REPLACE 函数"></a>37. REPLACE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT REPLACE(&#x27;Hello, world!&#x27;, &#x27;world&#x27;, &#x27;SQL&#x27;);</span><br><span class="line">-- 解析：输出结果为：Hello, SQL! ，该函数用于替换字符串中的指定部分。它会查找原字符串中的某个子字符串，并将其替换为另一个子字符串。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="38-REVERSE-函数"   >
+          <a href="#38-REVERSE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#38-REVERSE-函数" class="headerlink" title="38. REVERSE 函数"></a>38. REVERSE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT REVERSE(&#x27;12345&#x27;);</span><br><span class="line">-- 解析：输出结果为：54321，该函数用于返回给定字符串的反转版本，即将字符串中的字符顺序倒置。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="39-RIGHT-函数"   >
+          <a href="#39-RIGHT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#39-RIGHT-函数" class="headerlink" title="39. RIGHT 函数"></a>39. RIGHT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT RIGHT(&#x27;abcdef&#x27;, 3);</span><br><span class="line">-- 解析：输出结果为：def ,该函数用于返回一个字符串的 右侧（即末尾）部分，它从指定的位置开始，提取字符串的最后 N 个字符。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="40-RPAD-函数"   >
+          <a href="#40-RPAD-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#40-RPAD-函数" class="headerlink" title="40. RPAD 函数"></a>40. RPAD 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT RPAD(&#x27;abc&#x27;, 6, &#x27;*&#x27;)</span><br><span class="line">-- 解析：输出结果为：&#x27;abc***&#x27; ，该函数作用是将一个字符串填充到指定的长度，如果原字符串的长度小于指定的长度，则会在其右侧（也就是字符串的结尾）填充指定的字符，直到字符串达到目标长度。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="41-RTRIM-函数"   >
+          <a href="#41-RTRIM-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#41-RTRIM-函数" class="headerlink" title="41. RTRIM 函数"></a>41. RTRIM 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT RTRIM(&#x27;    Hello World    &#x27;);</span><br><span class="line">-- 解析：输出结果为&#x27;    Hello World&#x27;，该函数用于移除字符串右端的空格字符（即尾部的空格）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="42-SOUNDEX-函数"   >
+          <a href="#42-SOUNDEX-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#42-SOUNDEX-函数" class="headerlink" title="42. SOUNDEX 函数"></a>42. SOUNDEX 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT SOUNDEX(&#x27;hello&#x27;);</span><br><span class="line">-- 解析：输出结果为：&#x27;H440&#x27;，该函数是一个用来返回字符串的声音编码的函数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="43-SPACE-函数"   >
+          <a href="#43-SPACE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#43-SPACE-函数" class="headerlink" title="43. SPACE 函数"></a>43. SPACE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT SPACE(5);</span><br><span class="line">-- 解析：输出结果为：&#x27;     &#x27;,该函数用于生成指定数量的空格字符。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="44-SUBSTRING-函数"   >
+          <a href="#44-SUBSTRING-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#44-SUBSTRING-函数" class="headerlink" title="44. SUBSTRING 函数"></a>44. SUBSTRING 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT SUBSTRING(&#x27;Hello, World!&#x27;, -6, 5);</span><br><span class="line">-- 解析：输出结果为：&#x27;World&#x27; （ps:从倒数第六个开始提取五个字符），该函数用于从一个字符串中提取子字符串。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="45-SUBSTRING-INDEX-函数"   >
+          <a href="#45-SUBSTRING-INDEX-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#45-SUBSTRING-INDEX-函数" class="headerlink" title="45. SUBSTRING_INDEX 函数"></a>45. SUBSTRING_INDEX 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT SUBSTRING_INDEX(&#x27;apple,banana,cherry&#x27;, &#x27;,&#x27;, 2);</span><br><span class="line">SELECT SUBSTRING_INDEX(&#x27;apple,banana,cherry&#x27;, &#x27;,&#x27;, -1);</span><br><span class="line">-- 解析：1.输出结果为：&#x27;apple,banana&#x27;；2.输出结果为：&#x27;cherry&#x27;,该函数用于根据指定的分隔符提取字符串的某一部分。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="46-TRIM-函数"   >
+          <a href="#46-TRIM-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#46-TRIM-函数" class="headerlink" title="46. TRIM 函数"></a>46. TRIM 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT TRIM(&#x27;   Hello, World!   &#x27;);</span><br><span class="line">-- 解析：输出结果为：&#x27;Hello, World!&#x27;，该函数用于删除字符串两端的空白字符或指定的字符。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="47-UCASE-函数"   >
+          <a href="#47-UCASE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#47-UCASE-函数" class="headerlink" title="47. UCASE 函数"></a>47. UCASE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT UCASE(&#x27;hello, world!&#x27;);</span><br><span class="line">-- 解析：输出结果为：&#x27;HELLO, WORLD!&#x27;，该函数用于将字符串中的所有字符转换为大写字母。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="48-UNCOMPRESS-函数"   >
+          <a href="#48-UNCOMPRESS-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#48-UNCOMPRESS-函数" class="headerlink" title="48. UNCOMPRESS 函数"></a>48. UNCOMPRESS 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT COMPRESS(&#x27;This is a test string.&#x27;); -- 压缩数据</span><br><span class="line">SELECT UNCOMPRESS(COMPRESS(&#x27;This is a test string.&#x27;)); -- 解压缩数据</span><br><span class="line">-- 解析：该函数用于解压缩使用 COMPRESS() 压缩的二进制数据。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="49-UNCOMPRESSED-LENGTH-函数"   >
+          <a href="#49-UNCOMPRESSED-LENGTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#49-UNCOMPRESSED-LENGTH-函数" class="headerlink" title="49. UNCOMPRESSED_LENGTH 函数"></a>49. UNCOMPRESSED_LENGTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT COMPRESS(&#x27;This is a test string.&#x27;); -- 压缩一个字符串</span><br><span class="line">SELECT UNCOMPRESSED_LENGTH(COMPRESS(&#x27;This is a test string.&#x27;)); -- 获取该压缩数据的原始长度</span><br><span class="line">-- 解析：输出结果为：22，该函数用于计算已压缩数据的原始长度。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="50-UNHEX-函数"   >
+          <a href="#50-UNHEX-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#50-UNHEX-函数" class="headerlink" title="50. UNHEX 函数"></a>50. UNHEX 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT UNHEX(&#x27;A1B2&#x27;);</span><br><span class="line">-- 解析：输出结果为：0xA1B2，该函数用于将十六进制字符串转换为原始的二进制数据。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="51-UPPER-函数"   >
+          <a href="#51-UPPER-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#51-UPPER-函数" class="headerlink" title="51. UPPER 函数"></a>51. UPPER 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT UPPER(&#x27;hello!&#x27;);</span><br><span class="line">-- 解析：输出结果为：HELLO!，该函数用于将字符串中的所有字母转换为大写字母。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="数学函数："   >
+          <a href="#数学函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#数学函数：" class="headerlink" title="数学函数："></a>数学函数：</h2>
+      
+        <h3 id="52-ABS-函数"   >
+          <a href="#52-ABS-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#52-ABS-函数" class="headerlink" title="52. ABS 函数"></a>52. ABS 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT ABS(-2)</span><br><span class="line">-- 解析：输出结果：2，该函数将数字转变成绝对值。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-1"   >
+          <a href="#5-ASCII-函数-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-1" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-2"   >
+          <a href="#5-ASCII-函数-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-2" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-3"   >
+          <a href="#5-ASCII-函数-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-3" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h2 id="日期时间函数："   >
+          <a href="#日期时间函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#日期时间函数：" class="headerlink" title="日期时间函数："></a>日期时间函数：</h2>
+      
+        <h3 id="5-ADDDATE-函数"   >
+          <a href="#5-ADDDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ADDDATE-函数" class="headerlink" title="5. ADDDATE 函数"></a>5. ADDDATE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- ADDDATE(date, INTERVAL expr unit)</span><br><span class="line">-- date：要修改的原始日期或时间。</span><br><span class="line">-- expr：要添加的时间间隔数值，可以是一个数字或表达式。</span><br><span class="line">-- unit：时间单位，指定要添加的时间单位类型，例如天（DAY）、月（MONTH）、年（YEAR）、小时（HOUR）、分钟（MINUTE）、秒（SECOND）、周（WEEK）等。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT ADDDATE(&#x27;2024-11-01&#x27;, INTERVAL 10 DAY);</span><br><span class="line">-- 解析：输出结果为：2024-11-11，该函数是一个用于向日期或时间添加指定时间间隔的函数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ADDTIME-函数"   >
+          <a href="#5-ADDTIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ADDTIME-函数" class="headerlink" title="5. ADDTIME 函数"></a>5. ADDTIME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- ADDTIME(datetime, time)</span><br><span class="line">-- datetime：原始的日期时间值，类型为 DATETIME 或 TIME。</span><br><span class="line">-- time：要添加的时间间隔，通常是以 &#x27;HH:MM:SS&#x27; 格式表示的时间值。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT ADDTIME(&#x27;2024-11-01 12:00:00&#x27;, &#x27;01:30:00&#x27;);</span><br><span class="line">-- 解析：输出结果为：2024-11-01 13:30:00，该函数是一个用于向时间或日期时间值添加指定的时间间隔的函数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-CONVERT-TZ-函数"   >
+          <a href="#5-CONVERT-TZ-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-CONVERT-TZ-函数" class="headerlink" title="5. CONVERT_TZ 函数"></a>5. CONVERT_TZ 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- CONVERT_TZ(datetime, from_tz, to_tz)</span><br><span class="line">-- datetime: 要转换的时间，通常是一个 DATETIME 或 TIMESTAMP 类型的值。</span><br><span class="line">-- from_tz: 当前时间所在的时区，应该是一个有效的时区名称或时区偏移量(ps：&#x27;-05:00&#x27;、&#x27;+02:00&#x27;)。</span><br><span class="line">-- to_tz: 目标时区，应该是一个有效的时区名称或时区偏移量。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT CONVERT_TZ(&#x27;2024-11-14 10:00:00&#x27;, &#x27;America/New_York&#x27;, &#x27;Asia/Shanghai&#x27;);</span><br><span class="line">-- 解析：该函数用于将一个时间值从一个时区转换为另一个时区。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-CURDATE-函数"   >
+          <a href="#5-CURDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-CURDATE-函数" class="headerlink" title="5. CURDATE 函数"></a>5. CURDATE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT CURDATE();</span><br><span class="line">-- 解析：输出结果为：2024-11-14 10:00:00（当前日期），该函数是一个用于返回当前日期的函数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-4"   >
+          <a href="#5-ASCII-函数-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-4" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-5"   >
+          <a href="#5-ASCII-函数-5" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-5" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-6"   >
+          <a href="#5-ASCII-函数-6" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-6" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-7"   >
+          <a href="#5-ASCII-函数-7" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-7" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-8"   >
+          <a href="#5-ASCII-函数-8" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-8" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h2 id="聚合函数"   >
+          <a href="#聚合函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2>
+      
+        <h3 id="5-AVG-函数"   >
+          <a href="#5-AVG-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-AVG-函数" class="headerlink" title="5. AVG 函数"></a>5. AVG 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT AVG(salary) AS average_salary</span><br><span class="line">FROM employees;</span><br><span class="line">-- 解析：该函数用于计算指定列的平均值。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-BIT-AND-函数"   >
+          <a href="#5-BIT-AND-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-BIT-AND-函数" class="headerlink" title="5. BIT_AND 函数"></a>5. BIT_AND 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-- 例子，假设权限值是按位存储的（例如：user_id=permissions，7 = 0111，3 = 0011，5 = 0101），你可以使用 BIT_AND() 来计算这些权限的按位与结果：</span><br><span class="line">SELECT BIT_AND(permissions) AS combined_permissions</span><br><span class="line">FROM user_permissions;</span><br><span class="line">-- 解析：对于 7 (0111)，3 (0011)，和 5 (0101)，按位与操作会得到 1 (0001)，因此返回结果为 1。</span><br><span class="line">-- 按位与 运算：</span><br><span class="line">-- 0111   (7)</span><br><span class="line">-- AND</span><br><span class="line">-- 0011   (3)</span><br><span class="line">-- AND</span><br><span class="line">-- 0101   (5)</span><br><span class="line">-- -----------------</span><br><span class="line">-- 0001   (1)</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-BIT-OR-函数"   >
+          <a href="#5-BIT-OR-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-BIT-OR-函数" class="headerlink" title="5. BIT_OR 函数"></a>5. BIT_OR 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-- 例子，假设权限值是按位存储的（例如：user_id=permissions，7 = 0111，3 = 0011，5 = 0101），你可以使用 BIT_OR() 来计算这些权限的按位与结果：</span><br><span class="line">SELECT BIT_OR(permissions) AS combined_permissions</span><br><span class="line">FROM user_permissions;</span><br><span class="line">-- 解析：对于 7 (0111)，3 (0011)，和 5 (0101)，按位或操作会得到 15 (1111)，因此返回结果为 15。</span><br><span class="line">-- 按位与 运算：</span><br><span class="line">-- 0111   (7)</span><br><span class="line">-- OR</span><br><span class="line">-- 0011   (3)</span><br><span class="line">-- OR</span><br><span class="line">-- 0101   (5)</span><br><span class="line">-- -----------------</span><br><span class="line">-- 1111   (15)</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-BIT-XOR-函数"   >
+          <a href="#5-BIT-XOR-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-BIT-XOR-函数" class="headerlink" title="5. BIT_XOR 函数"></a>5. BIT_XOR 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-- 例子，假设权限值是按位存储的（例如：user_id=permissions，7 = 0111，3 = 0011，5 = 0101），你可以使用 BIT_XOR() 来计算这些权限的按位与结果：</span><br><span class="line">SELECT BIT_XOR(permissions) AS xor_permissions</span><br><span class="line">FROM user_permissions;</span><br><span class="line">-- 解析：对于 7 (0111)，3 (0011)，和 5 (0101)，按位异或操作会得到 1 (0001)，因此返回结果为 1。</span><br><span class="line">-- 按位与 运算：</span><br><span class="line">-- 0111   (7)</span><br><span class="line">-- XOR</span><br><span class="line">-- 0011   (3)</span><br><span class="line">-- -----------------</span><br><span class="line">-- 0100   (4)</span><br><span class="line"></span><br><span class="line">-- 0100   (4)</span><br><span class="line">-- XOR</span><br><span class="line">-- 0101   (5)</span><br><span class="line">-- -----------------</span><br><span class="line">-- 0001   (1)</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-COUNT-函数"   >
+          <a href="#5-COUNT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-COUNT-函数" class="headerlink" title="5. COUNT 函数"></a>5. COUNT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT COUNT(user_id) FROM employees;</span><br><span class="line">-- 解析：输出结果是user_id的个数，该函数用于计算表中某列的行数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-GROUP-CONCAT-函数"   >
+          <a href="#5-GROUP-CONCAT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-GROUP-CONCAT-函数" class="headerlink" title="5. GROUP_CONCAT 函数"></a>5. GROUP_CONCAT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT department, GROUP_CONCAT(name ORDER BY name SEPARATOR &#x27;|&#x27;) AS employees</span><br><span class="line">FROM employees</span><br><span class="line">GROUP BY department;</span><br><span class="line">-- 解析：输出结果为：HR Alice|Charlie,IT Bob|Dave，该函数用于将分组中的多个值连接成一个字符串。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-MIN-函数"   >
+          <a href="#5-MIN-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-MIN-函数" class="headerlink" title="5. MIN 函数"></a>5. MIN 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MIN(salary) AS min_salary</span><br><span class="line">FROM employees;</span><br><span class="line">-- 解析：输出结果返回salary的最小值，该函数用于返回指定列中的最小值。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-MAX-函数"   >
+          <a href="#5-MAX-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-MAX-函数" class="headerlink" title="5. MAX 函数"></a>5. MAX 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MAX(salary) AS max_salary</span><br><span class="line">FROM employees;</span><br><span class="line">-- 解析：输出结果返回salary的最大值，该函数用于返回指定列中的最大值。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-STDDEV-简写：STD-函数"   >
+          <a href="#5-STDDEV-简写：STD-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-STDDEV-简写：STD-函数" class="headerlink" title="5. STDDEV(简写：STD) 函数"></a>5. STDDEV(简写：STD) 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT STDDEV(salary) AS salary_stddev</span><br><span class="line">FROM employees;</span><br><span class="line">-- 解析：STD 和 STDDEV 函数都用于计算某列的标准差。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-STDDEV-POP-函数"   >
+          <a href="#5-STDDEV-POP-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-STDDEV-POP-函数" class="headerlink" title="5. STDDEV_POP 函数"></a>5. STDDEV_POP 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT STDDEV_POP(amount) AS overall_stddev</span><br><span class="line">FROM sales;</span><br><span class="line">-- 解析：该函数用于计算一组数据的总体标准差。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-STDDEV-SAMP-函数"   >
+          <a href="#5-STDDEV-SAMP-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-STDDEV-SAMP-函数" class="headerlink" title="5. STDDEV_SAMP 函数"></a>5. STDDEV_SAMP 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT STDDEV_SAMP(amount) AS sample_stddev</span><br><span class="line">FROM sales;</span><br><span class="line">-- 解析：该函数用于计算样本标准差，而不是总体标准差。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-SUM-函数"   >
+          <a href="#5-SUM-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-SUM-函数" class="headerlink" title="5. SUM 函数"></a>5. SUM 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT SUM(quantity * price) AS total_revenue FROM sales;</span><br><span class="line">-- 解析：结果返回列quantity和price的乘积求和。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-VAR-POP-函数"   >
+          <a href="#5-VAR-POP-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-VAR-POP-函数" class="headerlink" title="5. VAR_POP 函数"></a>5. VAR_POP 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：楼主不是SQLBoy理解不了一点</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-VAR-SAMP-函数"   >
+          <a href="#5-VAR-SAMP-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-VAR-SAMP-函数" class="headerlink" title="5. VAR_SAMP 函数"></a>5. VAR_SAMP 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：楼主不是SQLBoy理解不了一点</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-VARIANCE-函数"   >
+          <a href="#5-VARIANCE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-VARIANCE-函数" class="headerlink" title="5. VARIANCE 函数"></a>5. VARIANCE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：楼主不是SQLBoy理解不了一点</span><br></pre></td></tr></table></div></figure>
+
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/04/03/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/">HTTP响应状态码大全及介绍</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-04-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-04-03</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h3 id="常见的HTTP状态码："   >
           <a href="#常见的HTTP状态码：" class="heading-link"><i class="fas fa-link"></i></a><a href="#常见的HTTP状态码：" class="headerlink" title="常见的HTTP状态码："></a>常见的HTTP状态码：</h3>
       
@@ -450,4 +865,4 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/02/27/%E5%9C%A8post%E4%B8%8B%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0/">别滑辣，没有辣</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-02-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="就到这啦！真心感谢你能看完我的成长之路……"   >
           <a href="#就到这啦！真心感谢你能看完我的成长之路……" class="heading-link"><i class="fas fa-link"></i></a><a href="#就到这啦！真心感谢你能看完我的成长之路……" class="headerlink" title="就到这啦！真心感谢你能看完我的成长之路……"></a>就到这啦！真心感谢你能看完我的成长之路……</h1>
-      </div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/pho/IMG_0744(20220413-103811).JPG" alt="avatar"></div><p class="sidebar-ov-author__text">时时勤拂拭，勿使惹尘埃。</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">17</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Belly	|	vx：lin128Ve98</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
+      </div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/pho/IMG_0744(20220413-103811).JPG" alt="avatar"></div><p class="sidebar-ov-author__text">时时勤拂拭，勿使惹尘埃。</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">20</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">18</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Belly	|	vx：lin128Ve98</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
