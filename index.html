@@ -30,7 +30,7 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/10/23/MySQL%E5%87%BD%E6%95%B0%E5%A4%A7%E5%85%A8/">MySQL函数大全笔记（持续更新中...）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-10-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-11-15</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__subtitle">总有人间一两风，填我十万八千梦。</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/10/23/MySQL%E5%87%BD%E6%95%B0%E5%A4%A7%E5%85%A8/">MySQL函数大全笔记（持续更新中...）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-10-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="控制流程函数："   >
           <a href="#控制流程函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#控制流程函数：" class="headerlink" title="控制流程函数："></a>控制流程函数：</h2>
       
@@ -292,77 +292,122 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT UPPER(&#x27;hello!&#x27;);</span><br><span class="line">-- 解析：输出结果为：HELLO!，该函数用于将字符串中的所有字母转换为大写字母。</span><br></pre></td></tr></table></div></figure>
 
 
-        <h2 id="数学函数："   >
-          <a href="#数学函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#数学函数：" class="headerlink" title="数学函数："></a>数学函数：</h2>
-      
-        <h3 id="52-ABS-函数"   >
-          <a href="#52-ABS-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#52-ABS-函数" class="headerlink" title="52. ABS 函数"></a>52. ABS 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT ABS(-2)</span><br><span class="line">-- 解析：输出结果：2，该函数将数字转变成绝对值。</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="5-ASCII-函数-1"   >
-          <a href="#5-ASCII-函数-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-1" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="5-ASCII-函数-2"   >
-          <a href="#5-ASCII-函数-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-2" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="5-ASCII-函数-3"   >
-          <a href="#5-ASCII-函数-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-3" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
 
 
         <h2 id="日期时间函数："   >
           <a href="#日期时间函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#日期时间函数：" class="headerlink" title="日期时间函数："></a>日期时间函数：</h2>
       
-        <h3 id="5-ADDDATE-函数"   >
-          <a href="#5-ADDDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ADDDATE-函数" class="headerlink" title="5. ADDDATE 函数"></a>5. ADDDATE 函数</h3>
+        <h3 id="52-ADDDATE-函数"   >
+          <a href="#52-ADDDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#52-ADDDATE-函数" class="headerlink" title="52. ADDDATE 函数"></a>52. ADDDATE 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- ADDDATE(date, INTERVAL expr unit)</span><br><span class="line">-- date：要修改的原始日期或时间。</span><br><span class="line">-- expr：要添加的时间间隔数值，可以是一个数字或表达式。</span><br><span class="line">-- unit：时间单位，指定要添加的时间单位类型，例如天（DAY）、月（MONTH）、年（YEAR）、小时（HOUR）、分钟（MINUTE）、秒（SECOND）、周（WEEK）等。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT ADDDATE(&#x27;2024-11-01&#x27;, INTERVAL 10 DAY);</span><br><span class="line">-- 解析：输出结果为：2024-11-11，该函数是一个用于向日期或时间添加指定时间间隔的函数。</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="5-ADDTIME-函数"   >
-          <a href="#5-ADDTIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ADDTIME-函数" class="headerlink" title="5. ADDTIME 函数"></a>5. ADDTIME 函数</h3>
+        <h3 id="53-ADDTIME-函数"   >
+          <a href="#53-ADDTIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#53-ADDTIME-函数" class="headerlink" title="53. ADDTIME 函数"></a>53. ADDTIME 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- ADDTIME(datetime, time)</span><br><span class="line">-- datetime：原始的日期时间值，类型为 DATETIME 或 TIME。</span><br><span class="line">-- time：要添加的时间间隔，通常是以 &#x27;HH:MM:SS&#x27; 格式表示的时间值。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT ADDTIME(&#x27;2024-11-01 12:00:00&#x27;, &#x27;01:30:00&#x27;);</span><br><span class="line">-- 解析：输出结果为：2024-11-01 13:30:00，该函数是一个用于向时间或日期时间值添加指定的时间间隔的函数。</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="5-CONVERT-TZ-函数"   >
-          <a href="#5-CONVERT-TZ-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-CONVERT-TZ-函数" class="headerlink" title="5. CONVERT_TZ 函数"></a>5. CONVERT_TZ 函数</h3>
+        <h3 id="54-CONVERT-TZ-函数"   >
+          <a href="#54-CONVERT-TZ-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#54-CONVERT-TZ-函数" class="headerlink" title="54. CONVERT_TZ 函数"></a>54. CONVERT_TZ 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- CONVERT_TZ(datetime, from_tz, to_tz)</span><br><span class="line">-- datetime: 要转换的时间，通常是一个 DATETIME 或 TIMESTAMP 类型的值。</span><br><span class="line">-- from_tz: 当前时间所在的时区，应该是一个有效的时区名称或时区偏移量(ps：&#x27;-05:00&#x27;、&#x27;+02:00&#x27;)。</span><br><span class="line">-- to_tz: 目标时区，应该是一个有效的时区名称或时区偏移量。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT CONVERT_TZ(&#x27;2024-11-14 10:00:00&#x27;, &#x27;America/New_York&#x27;, &#x27;Asia/Shanghai&#x27;);</span><br><span class="line">-- 解析：该函数用于将一个时间值从一个时区转换为另一个时区。</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="5-CURDATE-函数"   >
-          <a href="#5-CURDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-CURDATE-函数" class="headerlink" title="5. CURDATE 函数"></a>5. CURDATE 函数</h3>
+        <h3 id="55-CURDATE-函数"   >
+          <a href="#55-CURDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#55-CURDATE-函数" class="headerlink" title="55. CURDATE 函数"></a>55. CURDATE 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT CURDATE();</span><br><span class="line">-- 解析：输出结果为：2024-11-14 10:00:00（当前日期），该函数是一个用于返回当前日期的函数。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="56-CURRENT-DATE-函数"   >
+          <a href="#56-CURRENT-DATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#56-CURRENT-DATE-函数" class="headerlink" title="56. CURRENT_DATE 函数"></a>56. CURRENT_DATE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT CURRENT_DATE;</span><br><span class="line">-- 解析：输出结果为：2024-11-15，该函数返回服务器所在时区的当前日期，即具体取决于数据库的时区设置，通常格式为 YYYY-MM-DD（年-月-日）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="57-CURTIME-函数"   >
+          <a href="#57-CURTIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#57-CURTIME-函数" class="headerlink" title="57. CURTIME 函数"></a>57. CURTIME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT CURTIME();</span><br><span class="line">-- 解析：输出结果为：13:30:45，该函数返回的是服务器当前的时间，通常格式为 HH:MM:SS（小时:分钟:秒）， 具体取决于数据库的时区设置。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="58-CURRENT-TIMESTAMP-函数"   >
+          <a href="#58-CURRENT-TIMESTAMP-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#58-CURRENT-TIMESTAMP-函数" class="headerlink" title="58. CURRENT_TIMESTAMP 函数"></a>58. CURRENT_TIMESTAMP 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">CREATE TABLE example (</span><br><span class="line">    id INT PRIMARY KEY,</span><br><span class="line">    name VARCHAR(255),</span><br><span class="line">    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span><br><span class="line">);</span><br><span class="line">-- 解析：该函数用于获取当前的日期和时间，于NOW()等价。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="59-DATE-函数"   >
+          <a href="#59-DATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#59-DATE-函数" class="headerlink" title="59. DATE 函数"></a>59. DATE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT DATE(&#x27;2024-11-19 08:45:30&#x27;);</span><br><span class="line">-- 解析：输出结果为：2024-11-19，该函数用于从日期或时间戳中提取日期部分（即年、月、日，格式YYYY-MM-DD）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="60-DATEDIFF-函数"   >
+          <a href="#60-DATEDIFF-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#60-DATEDIFF-函数" class="headerlink" title="60. DATEDIFF 函数"></a>60. DATEDIFF 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT DATEDIFF(&#x27;2024-11-19&#x27;, &#x27;2024-11-10&#x27;);</span><br><span class="line">-- 解析：输出结果为：9（如果第一个日期早于第二个日期，返回值为负数），该函数用于计算两个日期之间的天数差值。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="61-DATE-ADD-函数"   >
+          <a href="#61-DATE-ADD-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#61-DATE-ADD-函数" class="headerlink" title="61. DATE_ADD 函数"></a>61. DATE_ADD 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DATE_ADD(date, INTERVAL value unit)</span><br><span class="line">-- date：要添加时间间隔的日期或日期时间值。</span><br><span class="line">-- value：要添加的时间数量。它是一个整数，可以是负数（表示减去时间）。</span><br><span class="line">-- unit：时间单位，指定时间间隔的类型，例如 SECOND（秒）、MINUTE（分钟）、HOUR（小时）、DAY（天）、MONTH（月）、YEAR（年）、WEEK（周）、QUARTER（季度）等。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DATE_ADD(&#x27;2024-11-19&#x27;, INTERVAL 10 DAY);</span><br><span class="line">-- 解析：输出结果为：2024-11-29，该函数用于向一个日期值添加指定的时间间隔（如天、月、年等）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="62-DATE-FORMAT-函数"   >
+          <a href="#62-DATE-FORMAT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#62-DATE-FORMAT-函数" class="headerlink" title="62. DATE_FORMAT 函数"></a>62. DATE_FORMAT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DATE_FORMAT(date, format)</span><br><span class="line">-- date：要格式化的日期或日期时间值。</span><br><span class="line">-- format：一个格式字符串，定义了如何将日期转换为字符串。格式字符串包含了特定的格式化符号，代表日期和时间的各个部分（如年、月、日、小时、分钟等）。</span><br><span class="line">-- 常用的格式化符号：%Y：四位数的年份（例如：2024）、%y：两位数的年份（例如：24）、%m：月份（01到12）、%d：日（01到31）、%H：小时（00到23）、%i：分钟（00到59）、%s：秒（00到59）、%W：星期的全名（例如：Sunday）、%a：星期的简写（例如：Sun）、%b：月份的简写（例如：Jan）、%M：月份的全名（例如：January）</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DATE_FORMAT(&#x27;2024-11-19 15:30:45&#x27;, &#x27;%Y-%m-%d %H:%i:%s&#x27;);</span><br><span class="line">-- 解析：输出结果为：2024-11-19 15:30:45，该函数用于将日期值格式化为指定的字符串格式。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="63-DAY-函数"   >
+          <a href="#63-DAY-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#63-DAY-函数" class="headerlink" title="63. DAY 函数"></a>63. DAY 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DAY(date)</span><br><span class="line">-- date：一个有效的日期或日期时间值。可以是一个 DATE 类型、DATETIME 类型或者 TIMESTAMP 类型的字段或表达式。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DAY(&#x27;2024-11-19 15:30:45&#x27;);</span><br><span class="line">-- 解析：输出结果为：19，该函数用于从日期或日期时间值中提取出“天”的部分，返回的是一个整数，表示日期中的“日”部分（即一个月中的具体日期，范围是 1 到 31）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="64-DAYNAME-函数"   >
+          <a href="#64-DAYNAME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#64-DAYNAME-函数" class="headerlink" title="64. DAYNAME 函数"></a>64. DAYNAME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DAYNAME(date)</span><br><span class="line">-- date：一个有效的日期或日期时间值。可以是 DATE 类型、DATETIME 类型或者 TIMESTAMP 类型的字段或表达式。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DAYNAME(&#x27;2024-11-19&#x27;);</span><br><span class="line">-- 解析：输出结果为：Tuesday，该函数用于返回一个日期值对应的星期几的名称，返回的结果是一个字符串，表示星期几的全名（如：Monday, Tuesday 等）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="65-DAYOFMONTH-函数"   >
+          <a href="#65-DAYOFMONTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#65-DAYOFMONTH-函数" class="headerlink" title="65. DAYOFMONTH 函数"></a>65. DAYOFMONTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DAYOFMONTH(date)</span><br><span class="line">-- date：一个有效的日期或日期时间值，通常是 DATE、DATETIME 或 TIMESTAMP 类型的字段或表达式。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DAYOFMONTH(&#x27;2024-11-19 15:30:45&#x27;);</span><br><span class="line">-- 解析：输出结果为：19，该函数用于返回一个日期或日期时间值中的“日”部分，也就是该日期在一个月中的具体日期。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="66-DAYOFWEEK-函数"   >
+          <a href="#66-DAYOFWEEK-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#66-DAYOFWEEK-函数" class="headerlink" title="66. DAYOFWEEK 函数"></a>66. DAYOFWEEK 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DAYOFWEEK(date)</span><br><span class="line">-- date：一个有效的日期或日期时间值，可以是 DATE、DATETIME 或 TIMESTAMP 类型的字段或表达式。</span><br><span class="line">-- 返回一个整数，表示该日期对应的星期几。1：星期日 (Sunday)、2：星期一 (Monday)、3：星期二 (Tuesday)、4：星期三 (Wednesday)、5：星期四 (Thursday)、6：星期五 (Friday)、7：星期六 (Saturday)</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DAYOFWEEK(&#x27;2024-11-19&#x27;);</span><br><span class="line">-- 解析：输出结果为：3，该函数用于返回一个日期值对应的星期几的数字表示。星期天返回值为 1，星期一为 2，依此类推，星期六为 7。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-1"   >
+          <a href="#5-ASCII-函数-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-1" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-2"   >
+          <a href="#5-ASCII-函数-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-2" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-3"   >
+          <a href="#5-ASCII-函数-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-3" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+        <h2 id="数学函数："   >
+          <a href="#数学函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#数学函数：" class="headerlink" title="数学函数："></a>数学函数：</h2>
+      
+        <h3 id="5-ABS-函数"   >
+          <a href="#5-ABS-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ABS-函数" class="headerlink" title="5. ABS 函数"></a>5. ABS 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT ABS(-2)</span><br><span class="line">-- 解析：输出结果：2，该函数将数字转变成绝对值。</span><br></pre></td></tr></table></div></figure>
 
 
         <h3 id="5-ASCII-函数-4"   >
           <a href="#5-ASCII-函数-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-4" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
 
 
         <h3 id="5-ASCII-函数-5"   >
           <a href="#5-ASCII-函数-5" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-5" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
 
 
         <h3 id="5-ASCII-函数-6"   >
           <a href="#5-ASCII-函数-6" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-6" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="5-ASCII-函数-7"   >
-          <a href="#5-ASCII-函数-7" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-7" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="5-ASCII-函数-8"   >
-          <a href="#5-ASCII-函数-8" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-8" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
 
 
 
