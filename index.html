@@ -50,7 +50,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
           <a href="#4、事件调度器基本操作：" class="heading-link"><i class="fas fa-link"></i></a><a href="#4、事件调度器基本操作：" class="headerlink" title="4、事件调度器基本操作："></a>4、事件调度器基本操作：</h4>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 查看事件</span><br><span class="line">show events; </span><br><span class="line"></span><br><span class="line">-- 禁用事件</span><br><span class="line">alter event delete_old_logs disable;</span><br><span class="line"></span><br><span class="line">-- 删除事件</span><br><span class="line">drop event delete_old_logs; </span><br></pre></td></tr></table></div></figure>
 
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/10/23/MySQL%E5%87%BD%E6%95%B0%E5%A4%A7%E5%85%A8/">MySQL函数大全笔记（持续更新中...）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-10-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-11-19</span></span></div></header><div class="post-body"><div class="post-excerpt">
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/10/23/MySQL%E5%87%BD%E6%95%B0%E5%A4%A7%E5%85%A8/">MySQL函数大全笔记（持续更新中...）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2024-10-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2024-11-21</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="控制流程函数："   >
           <a href="#控制流程函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#控制流程函数：" class="headerlink" title="控制流程函数："></a>控制流程函数：</h2>
       
@@ -392,6 +392,86 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DAYOFWEEK(date)</span><br><span class="line">-- date：一个有效的日期或日期时间值，可以是 DATE、DATETIME 或 TIMESTAMP 类型的字段或表达式。</span><br><span class="line">-- 返回一个整数，表示该日期对应的星期几。1：星期日 (Sunday)、2：星期一 (Monday)、3：星期二 (Tuesday)、4：星期三 (Wednesday)、5：星期四 (Thursday)、6：星期五 (Friday)、7：星期六 (Saturday)</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DAYOFWEEK(&#x27;2024-11-19&#x27;);</span><br><span class="line">-- 解析：输出结果为：3，该函数用于返回一个日期值对应的星期几的数字表示。星期天返回值为 1，星期一为 2，依此类推，星期六为 7。</span><br></pre></td></tr></table></div></figure>
 
 
+        <h3 id="67-DAYOFYEAR-函数"   >
+          <a href="#67-DAYOFYEAR-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#67-DAYOFYEAR-函数" class="headerlink" title="67. DAYOFYEAR 函数"></a>67. DAYOFYEAR 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- DAYOFYEAR(date)</span><br><span class="line">-- date：一个有效的日期（DATE 类型）或日期时间（DATETIME 类型）值。也可以是日期或时间的字符串表示。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT DAYOFYEAR(&#x27;2024-11-21 15:30:00&#x27;);</span><br><span class="line">-- 解析：输出结果为：326，该函数用于返回给定日期是该年的第几天（即该日期在一年中的天数）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="68-EXTRACT-函数"   >
+          <a href="#68-EXTRACT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#68-EXTRACT-函数" class="headerlink" title="68. EXTRACT 函数"></a>68. EXTRACT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- EXTRACT(unit FROM date)</span><br><span class="line">-- unit：要提取的日期或时间部分（如年、月、日等）。这是一个关键字，可以是以下之一：YEAR：提取年份、MONTH：提取月份、DAY：提取日、HOUR：提取小时、MINUTE：提取分钟、SECOND：提取秒、MICROSECOND：提取微秒、QUARTER：提取季度（1 到 4）、WEEK：提取周数（ISO 周）、DAYOFYEAR：提取年份中的第几天、DAYS：提取自某个参考时间起的天数、其他如 ISOWEEK（ISO 周数）等。</span><br><span class="line">-- date：有效的日期或时间值，可以是 DATE、DATETIME、TIMESTAMP 或 TIME 类型。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT EXTRACT(DAYOFYEAR FROM &#x27;2024-11-21&#x27;);</span><br><span class="line">-- 解析：输出结果：326，该函数用于从日期或时间值中提取特定的部分（如年、月、日、小时、分钟等）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="69-ASCII-函数"   >
+          <a href="#69-ASCII-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#69-ASCII-函数" class="headerlink" title="69. ASCII 函数"></a>69. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- FROM_DAYS(N)</span><br><span class="line">-- N：这是一个整数值，表示自“纪元”（通常是 0年1月1日）以来的天数。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT FROM_DAYS(733000);</span><br><span class="line">-- 解析：输出结果为：2000-01-01，该函数是一个用于将一个日期表示为天数（从某个特定日期以来的天数）转换为实际日期。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="70-FROM-UNIXTIME-函数"   >
+          <a href="#70-FROM-UNIXTIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#70-FROM-UNIXTIME-函数" class="headerlink" title="70. FROM_UNIXTIME 函数"></a>70. FROM_UNIXTIME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- FROM_UNIXTIME(unix_timestamp, [format])</span><br><span class="line">-- unix_timestamp：这是一个整数值，表示自 1970 年 1 月 1 日 00:00:00 UTC 起的秒数（即 Unix 时间戳）。</span><br><span class="line">-- format（可选）：这是一个格式字符串，指定如何显示转换后的日期和时间。如果没有提供此参数，FROM_UNIXTIME 默认返回的日期格式是 YYYY-MM-DD HH:MM:SS。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT FROM_UNIXTIME(1609459200, &#x27;%Y-%m-%d&#x27;);</span><br><span class="line"></span><br><span class="line">-- 解析：输出结果为：2021-01-01，FROM_UNIXTIME 支持的格式化选项类似于 DATE_FORMAT 函数，常见的选项包括：%Y：四位数的年份（例如：2021）、%m：月份（01 到 12）、%d：日期（01 到 31）、%H：小时（00 到 23）、%i：分钟（00 到 59）、%s：秒（00 到 59）、%W：星期几（例如：Monday）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="71-GET-FORMAT-函数"   >
+          <a href="#71-GET-FORMAT-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#71-GET-FORMAT-函数" class="headerlink" title="71. GET_FORMAT 函数"></a>71. GET_FORMAT 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- GET_FORMAT(date_or_time, type)</span><br><span class="line">-- date_or_time：表示日期或时间类型，通常是 DATE 或 TIME。</span><br><span class="line">-- type：指定返回的格式类型，可以是以下值之一：&#x27;DATE&#x27;返回用于 DATE 类型的日期格式、&#x27;TIME&#x27;返回用于 TIME 类型的时间格式、&#x27;DATETIME&#x27;返回用于 DATETIME 类型的日期时间格式。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT GET_FORMAT(DATETIME, &#x27;DATETIME&#x27;);</span><br><span class="line">-- 解析：输出结果为：&#x27;YYYY-MM-DD HH:MM:SS&#x27;，该函数是一个用于获取日期或时间格式化的方式</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="72-HOUR-函数"   >
+          <a href="#72-HOUR-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#72-HOUR-函数" class="headerlink" title="72. HOUR 函数"></a>72. HOUR 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT HOUR(&#x27;2024-11-21 14:45:30&#x27;);</span><br><span class="line">-- 解析：输出结果为：14，该函数用于从时间或日期时间值中提取小时部分。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="73-LAST-DAY-函数"   >
+          <a href="#73-LAST-DAY-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#73-LAST-DAY-函数" class="headerlink" title="73. LAST_DAY 函数"></a>73. LAST_DAY 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LAST_DAY(&#x27;2024-11-15&#x27;);</span><br><span class="line">-- 解析：输出结果为：2024-11-30，该函数用于获取指定日期所在月份的最后一天。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="74-LOCALTIME-函数"   >
+          <a href="#74-LOCALTIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#74-LOCALTIME-函数" class="headerlink" title="74. LOCALTIME 函数"></a>74. LOCALTIME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LOCALTIME;</span><br><span class="line">-- 解析：输出结果为：2024-11-21 08:30:45，该函数返回当前数据库服务器的本地时间，格式为 YYYY-MM-DD HH:MM:SS。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="75-LOCALTIMESTAMP-函数"   >
+          <a href="#75-LOCALTIMESTAMP-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#75-LOCALTIMESTAMP-函数" class="headerlink" title="75. LOCALTIMESTAMP 函数"></a>75. LOCALTIMESTAMP 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT LOCALTIMESTAMP;</span><br><span class="line">-- 解析：输出结果为：2024-11-21 08:30:45，该函数返回当前本地时间的 DATETIME 类型，格式为 YYYY-MM-DD HH:MM:SS。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="76-MAKEDATE-函数"   >
+          <a href="#76-MAKEDATE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#76-MAKEDATE-函数" class="headerlink" title="76. MAKEDATE 函数"></a>76. MAKEDATE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- MAKEDATE(year, day_of_year)</span><br><span class="line">-- year：表示年份的整数，通常是一个 4 位数（例如：2024）。</span><br><span class="line">-- day_of_year：表示年份中的第几天，必须是一个整数，范围从 1 到 366。如果是闰年，最多可以是 366 天。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT MAKEDATE(2024, 100);</span><br><span class="line">-- 解析：输出结果为：2024-04-09，该函数用于根据给定的年份和天数创建一个日期。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="77-MAKETIME-函数"   >
+          <a href="#77-MAKETIME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#77-MAKETIME-函数" class="headerlink" title="77. MAKETIME 函数"></a>77. MAKETIME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- MAKETIME(hour, minute, second)</span><br><span class="line">-- hour：小时数，整数，取值范围为 0 到 23。</span><br><span class="line">-- minute：分钟数，整数，取值范围为 0 到 59。</span><br><span class="line">-- second：秒数，整数，取值范围为 0 到 59。</span><br><span class="line"></span><br><span class="line">-- 例子：</span><br><span class="line">SELECT MAKETIME(14, 30, 45);</span><br><span class="line">-- 解析：输出结果为：14:30:45，该函数用于根据给定的小时、分钟和秒数创建一个时间值，如果传入超出正常范围的数值（例如分钟超过 59 或秒数超过 59），MySQL 会自动调整为有效的时间。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="78-MICROSECOND-函数"   >
+          <a href="#78-MICROSECOND-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#78-MICROSECOND-函数" class="headerlink" title="78. MICROSECOND 函数"></a>78. MICROSECOND 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MICROSECOND(&#x27;2024-11-21 14:32:45.123456&#x27;);</span><br><span class="line">-- 解析：输出结果为：123456，该函数会返回从秒的部分开始的微秒数（即小数点后 6 位）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="79-MINUTE-函数"   >
+          <a href="#79-MINUTE-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#79-MINUTE-函数" class="headerlink" title="79. MINUTE 函数"></a>79. MINUTE 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MINUTE(&#x27;2024-11-21 14:32:45&#x27;);</span><br><span class="line">-- 解析：输出结果为：32，该函数用于从时间或日期中提取“分钟”部分。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="80-MONTH-函数"   >
+          <a href="#80-MONTH-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#80-MONTH-函数" class="headerlink" title="80. MONTH 函数"></a>80. MONTH 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MONTH(&#x27;2024-11-21 14:32:45&#x27;);</span><br><span class="line">-- 解析：输出结果为：11，该函数用于从一个日期或时间表达式中提取“月份”部分。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="81-MONTHNAME-函数"   >
+          <a href="#81-MONTHNAME-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#81-MONTHNAME-函数" class="headerlink" title="81. MONTHNAME 函数"></a>81. MONTHNAME 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT MONTHNAME(&#x27;2024-11-21 14:32:45&#x27;);</span><br><span class="line">-- 解析：输出结果为：November，该函数用于从日期中提取完整的月份名称（如“January”, “February” 等）。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="82-NOW-函数"   >
+          <a href="#82-NOW-函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#82-NOW-函数" class="headerlink" title="82. NOW 函数"></a>82. NOW 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT NOW();</span><br><span class="line">-- 解析：输出结果为：2024-11-21 09:30:55，该函数返回一个 DATETIME 类型的值，表示服务器的当前日期和时间，格式为 YYYY-MM-DD HH:MM:SS。</span><br></pre></td></tr></table></div></figure>
+
+
         <h3 id="5-ASCII-函数-1"   >
           <a href="#5-ASCII-函数-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-1" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
@@ -406,7 +486,19 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
           <a href="#5-ASCII-函数-3" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-3" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+
+        <h3 id="5-ASCII-函数-4"   >
+          <a href="#5-ASCII-函数-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-4" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-5"   >
+          <a href="#5-ASCII-函数-5" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-5" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 语法：</span><br><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+
+
         <h2 id="数学函数："   >
           <a href="#数学函数：" class="heading-link"><i class="fas fa-link"></i></a><a href="#数学函数：" class="headerlink" title="数学函数："></a>数学函数：</h2>
       
@@ -415,18 +507,18 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">SELECT ABS(-2)</span><br><span class="line">-- 解析：输出结果：2，该函数将数字转变成绝对值。</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="5-ASCII-函数-4"   >
-          <a href="#5-ASCII-函数-4" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-4" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="5-ASCII-函数-5"   >
-          <a href="#5-ASCII-函数-5" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-5" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
-      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
-
-
         <h3 id="5-ASCII-函数-6"   >
           <a href="#5-ASCII-函数-6" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-6" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-7"   >
+          <a href="#5-ASCII-函数-7" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-7" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-ASCII-函数-8"   >
+          <a href="#5-ASCII-函数-8" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-ASCII-函数-8" class="headerlink" title="5. ASCII 函数"></a>5. ASCII 函数</h3>
       <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 例子：</span><br><span class="line">-- 解析：</span><br></pre></td></tr></table></div></figure>
 
 
